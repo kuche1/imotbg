@@ -5,6 +5,7 @@ import (
 
 	"github.com/kuche1/gonet"
 	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/urll"
 )
 
 func main() {
@@ -17,4 +18,7 @@ func main() {
 	)
 
 	fmt.Printf("net=%v\n", net)
+
+	pageUrl := urll.Generate(1, 150_000)
+	fmt.Printf("pageUrl=%v\n", pageUrl)
 }
