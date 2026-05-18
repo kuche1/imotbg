@@ -9,8 +9,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("hi\n")
-
 	net := gonet.NewNet(
 		config.NetRequestDelayMS,
 		config.NetCacheFolder,
