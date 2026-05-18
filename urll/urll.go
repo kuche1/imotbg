@@ -9,8 +9,6 @@ import "fmt"
 // y МНОГОСТАЕН
 // y МЕЗОНЕТ
 // n АТЕЛИЕ, ТАВАН
-//
-// up to 300_000 EUR
 const _SprintfUrlPage = "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya/dvustaen/p-%v?type_home=3~4~5~6~&price_max=%v"
 
 func Generate(pageNum int, priceMaxEur int) string {
