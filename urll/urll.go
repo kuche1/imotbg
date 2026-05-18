@@ -9,8 +9,8 @@ import "fmt"
 // y МНОГОСТАЕН
 // y МЕЗОНЕТ
 // n АТЕЛИЕ, ТАВАН
-const _SprintfUrlPage = "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya/dvustaen/p-%v?type_home=3~4~5~6~&price_max=%v"
+const _SprintfUrl = "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya/dvustaen/p-%v?type_home=3~4~5~6~&price_max=%v"
 
 func Generate(pageNum int, priceMaxEur int) string {
-	return fmt.Sprintf(_SprintfUrlPage, pageNum, priceMaxEur)
+	return fmt.Sprintf(_SprintfUrl, pageNum, priceMaxEur)
 }
