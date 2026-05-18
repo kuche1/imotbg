@@ -17,6 +17,6 @@ func main() {
 
 	fmt.Printf("net=%v\n", net)
 
-	pageUrl := urll.Generate(1, 150_000)
+	pageUrl := urll.Generate(1, 100_000, 150_000)
 	fmt.Printf("pageUrl=%v\n", pageUrl)
 }
