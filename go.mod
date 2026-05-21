@@ -4,7 +4,7 @@ go 1.26.1
 
 require (
 	github.com/PuerkitoBio/goquery v1.12.0
-	github.com/kuche1/gonet v0.0.0-20260126221515-e2dcb49deb69
+	github.com/kuche1/gonet v0.0.0-20260521170408-08260588b586
 	golang.org/x/net v0.54.0
 )
 
@@ -27,6 +27,3 @@ require (
 	golang.org/x/text v0.37.0 // indirect
 	google.golang.org/protobuf v1.36.7 // indirect
 )
-
-// TODO: temporary
-replace github.com/kuche1/gonet => ../gonet
