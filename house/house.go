@@ -7,8 +7,9 @@ import (
 )
 
 type House struct {
-	Link  string
-	Price float64
+	Link     string
+	Price    float64
+	Location string
 	// Title        string
 	// EngineType   string
 	// Horsepower   int64
@@ -20,6 +21,7 @@ type House struct {
 func NewHouse(
 	link string,
 	price float64,
+	location string,
 	// title string,
 	// engineType string,
 	// horsepower int64,
@@ -28,9 +30,9 @@ func NewHouse(
 	// gearbox string,
 ) *House {
 	return &House{
-		Link:  link,
-		Price: price,
-		// Title:        title,
+		Link:     link,
+		Price:    price,
+		Location: location,
 		// EngineType:   engineType,
 		// Horsepower:   horsepower,
 		// YearProduced: yearProduced,
@@ -44,10 +46,11 @@ func (self *House) Sprintf() string {
 		`House:
     link: %v
     price: %v %v
+    location: %v
 `,
 		self.Link,
 		self.Price, config.Currency,
-		// self.Title,
+		self.Location,
 		// self.EngineType,
 		// self.Horsepower,
 		// self.YearProduced,

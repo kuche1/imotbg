@@ -39,6 +39,11 @@ func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House
 			continue
 		}
 
+		location, invalid := findLocation(elemInfo)
+		if invalid {
+			continue
+		}
+
 		// title, blacklisted := findTitle(elem_info, config)
 		// if blacklisted {
 		// 	continue
@@ -83,16 +88,17 @@ func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House
 		houses <- house.NewHouse(
 			pageData.link,
 			price,
+			location,
 		)
 	}
 }
 
-func findPrice(elem_info *goquery.Selection, url string) (_price float64, _invalid bool) {
+func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invalid bool) {
 	const eur = "€"
 
 	// log.Printf("DBG: elem_info: %v", elem_info)
 
-	elem := elem_info.Find("div.Price").First()
+	elem := elemInfo.Find("div.Price").First()
 
 	price := strings.TrimSpace(elem.Text())
 	// log.Printf("DBG: price: %v", price)
@@ -115,42 +121,43 @@ func findPrice(elem_info *goquery.Selection, url string) (_price float64, _inval
 	return value, false
 }
 
-// func findTitle(elem_info *goquery.Selection) (value string, blacklisted bool) {
-// 	elem_title := elem_info.Find("div.obTitle").First()
+func findLocation(elemInfo *goquery.Selection) (value string, blacklisted bool) {
+	elemTitle := elemInfo.Find("div.obTitle").First()
 
-// 	title := strings.TrimSpace(elem_title.Text())
-// 	parts := strings.Split(title, " Обява: ")
-// 	title = parts[0]
+	location := strings.TrimSpace(elemTitle.Text())
+	parts := strings.Split(location, "    ")
+	location = parts[1]
+	location = strings.TrimSpace(location)
 
-// 	title_lower := strings.ToLower(title)
+	// title_lower := strings.ToLower(title)
 
-// 	if len(config.BrandWhitelist) > 0 {
-// 		found := false
+	// if len(config.BrandWhitelist) > 0 {
+	// 	found := false
 
-// 		for _, whitelisted_title := range config.BrandWhitelist {
-// 			whitelisted_title_lower := strings.ToLower(whitelisted_title)
+	// 	for _, whitelisted_title := range config.BrandWhitelist {
+	// 		whitelisted_title_lower := strings.ToLower(whitelisted_title)
 
-// 			if strings.HasPrefix(title_lower, whitelisted_title_lower) {
-// 				found = true
-// 				break
-// 			}
-// 		}
+	// 		if strings.HasPrefix(title_lower, whitelisted_title_lower) {
+	// 			found = true
+	// 			break
+	// 		}
+	// 	}
 
-// 		if !found {
-// 			return title, true
-// 		}
-// 	}
+	// 	if !found {
+	// 		return title, true
+	// 	}
+	// }
 
-// 	for _, blacklisted_title := range config.BrandBlacklist {
-// 		blacklisted_title_lower := strings.ToLower(blacklisted_title)
+	// for _, blacklisted_title := range config.BrandBlacklist {
+	// 	blacklisted_title_lower := strings.ToLower(blacklisted_title)
 
-// 		if strings.HasPrefix(title_lower, blacklisted_title_lower) {
-// 			return title, true
-// 		}
-// 	}
+	// 	if strings.HasPrefix(title_lower, blacklisted_title_lower) {
+	// 		return title, true
+	// 	}
+	// }
 
-// 	return title, false
-// }
+	return location, false
+}
 
 // func findEngineType(elem_params *goquery.Selection, config *configuration.Config) (_engineType string, _blacklisted bool) {
 // 	elem := elem_params.Find("div.item.dvigatel").First()
