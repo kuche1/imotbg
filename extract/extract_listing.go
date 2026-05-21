@@ -2,7 +2,6 @@ package extract
 
 import (
 	"log"
-	"os"
 	"strconv"
 	"strings"
 
@@ -20,16 +19,16 @@ func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House
 		// elemParams := page_data.doc.Find("div.mainCarParams").First()
 
 		if elemInfo.Length() == 0 {
-			log.Printf("Not found: %v", pageData.link)
+			// log.Printf("Not found: %v", pageData.link)
 
-			err := os.WriteFile("debug", []byte(pageData.doc.Text()), 0644)
-			if err != nil {
-				panic(err)
-			}
+			// err := os.WriteFile("debug", []byte(pageData.doc.Text()), 0644)
+			// if err != nil {
+			// 	panic(err)
+			// }
 
 			log.Fatalf("Could not find \"contacts box\": %v", pageData.link)
 
-			continue
+			// continue
 		}
 
 		// log.Printf("DBG: elemInfo=%v", elemShortInfo)
