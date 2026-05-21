@@ -3,6 +3,7 @@ package house
 import (
 	"fmt"
 
+	"github.com/dustin/go-humanize"
 	"github.com/kuche1/imotbg/config"
 )
 
@@ -49,7 +50,7 @@ func (self *House) Sprintf() string {
     location: %v
 `,
 		self.Link,
-		self.Price, config.Currency,
+		humanize.Commaf(self.Price), config.Currency,
 		self.Location,
 		// self.EngineType,
 		// self.Horsepower,
