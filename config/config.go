@@ -1,7 +1,9 @@
 package config
 
+import "runtime"
+
 const NetCacheFolder = "net-cache"
-const NetRequestDelayMS = 1
+const NetRequestDelayMS = 50                     // TODO: see if we can safely lower this value
 const NetCachedResponseValiditySec = 60 * 60 * 6 // 6 hours
 
 const LastPagePossible = 25
@@ -10,3 +12,13 @@ const LastPagePossible = 25
 const PriceMin = 100_000
 const PriceMax = 150_000
 const PriceStep = 10_000 // if this is too big you may miss some listings
+
+var ThreadsExtractListingLinks = runtime.NumCPU()
+
+const ListingLinkPrefix = "https:"
+
+var LinkBlacklist = []string{
+	// "https://www.mobile.bg/obiava-11767956291631060-bmw-740-li-xdrive",
+}
+
+const ExtractChanBuf = 64
