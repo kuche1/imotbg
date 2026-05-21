@@ -2,10 +2,12 @@ package extract
 
 import (
 	"log"
+	"slices"
 	"strconv"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/kuche1/imotbg/config"
 	"github.com/kuche1/imotbg/house"
 )
 
@@ -39,7 +41,7 @@ func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House
 			continue
 		}
 
-		location, invalid := findLocation(elemInfo)
+		location, invalid := findLocation(elemInfo, pageData.link)
 		if invalid {
 			continue
 		}
@@ -121,13 +123,24 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invali
 	return value, false
 }
 
-func findLocation(elemInfo *goquery.Selection) (value string, blacklisted bool) {
+func findLocation(elemInfo *goquery.Selection, link string) (value string, blacklisted bool) {
 	elemTitle := elemInfo.Find("div.obTitle").First()
 
 	location := strings.TrimSpace(elemTitle.Text())
-	parts := strings.Split(location, "    ")
-	location = parts[1]
-	location = strings.TrimSpace(location)
+	// parts := strings.Split(location, "    ")
+	// location = parts[1]
+	// location = strings.TrimSpace(location)
+
+	parts := strings.Split(location, "\n")
+	if len(parts) != 4 {
+		log.Fatalf("Could not parse location: %v", link)
+	}
+	// parts[0] -> Продава 3-СТАЕН
+	// parts[1] ->     град София, Овча купел 2
+	// parts[2] ->     ул. Светла (not always present)
+	// parts[3] ->     Обява: 1c171137181218748
+
+	location = strings.TrimSpace(parts[1])
 
 	// title_lower := strings.ToLower(title)
 
@@ -148,13 +161,16 @@ func findLocation(elemInfo *goquery.Selection) (value string, blacklisted bool) 
 	// 	}
 	// }
 
-	// for _, blacklisted_title := range config.BrandBlacklist {
-	// 	blacklisted_title_lower := strings.ToLower(blacklisted_title)
-
-	// 	if strings.HasPrefix(title_lower, blacklisted_title_lower) {
-	// 		return title, true
+	// for _, blacklisted := range config.LocationPrefixBlacklist {
+	// 	// blacklisted := strings.ToLower(blacklisted)
+	// 	if strings.HasPrefix(location, blacklisted) {
+	// 		return "", true
 	// 	}
 	// }
+
+	if slices.Contains(config.LocationBlacklist, location) {
+		return "", true
+	}
 
 	return location, false
 }

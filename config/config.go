@@ -3,8 +3,8 @@ package config
 import "runtime"
 
 const NetCacheFolder = "net-cache"
-const NetRequestDelayMS = 1                      // TODO: see if we can safely lower this value
-const NetCachedResponseValiditySec = 60 * 60 * 6 // 6 hours
+const NetRequestDelayMS = 1                       // TODO: see if we can safely lower this value
+const NetCachedResponseValiditySec = 60 * 60 * 10 // 10 hours
 
 const LastPagePossible = 25
 
@@ -24,3 +24,12 @@ var LinkBlacklist = []string{
 }
 
 const ExtractChanBuf = 64
+
+var LocationBlacklist = []string{
+	// "град София, Филиповци",
+	// "град София, Модерно предградие",
+	// "град София, с. Мало Бучино",
+	// "град София, Център",
+	// "град София, Надежда 3",
+	// "град София, Овча купел 2",
+}
