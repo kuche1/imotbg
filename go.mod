@@ -27,3 +27,6 @@ require (
 	golang.org/x/text v0.37.0 // indirect
 	google.golang.org/protobuf v1.36.7 // indirect
 )
+
+// TODO: temporary
+replace github.com/kuche1/gonet => ../gonet

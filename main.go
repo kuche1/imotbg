@@ -1,7 +1,16 @@
 package main
 
-import "github.com/kuche1/imotbg/extract"
+import (
+	"fmt"
+
+	"github.com/kuche1/imotbg/extract"
+)
 
 func main() {
-	extract.Main()
+	houses := extract.Main()
+
+	for house := range houses {
+		repr := house.Sprintf()
+		fmt.Printf("%v\n", repr)
+	}
 }

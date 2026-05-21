@@ -1,14 +1,13 @@
 package extract
 
 import (
-	"fmt"
-
 	"github.com/PuerkitoBio/goquery"
 	"github.com/kuche1/gonet"
 	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/house"
 )
 
-func Main() {
+func Main() chan *house.House {
 	net := gonet.NewNet(
 		config.NetRequestDelayMS,
 		config.NetCacheFolder,
@@ -24,7 +23,8 @@ func Main() {
 	listingPageData := make(chan *_ListingPageData, config.ExtractChanBuf)
 	go downloadListingPages(net, listingLinks, listingPageData)
 
-	for data := range listingPageData {
-		fmt.Printf("data=%v\n", data)
-	}
+	houses := make(chan *house.House, config.ExtractChanBuf)
+	go extractHouses(listingPageData, houses)
+
+	return houses
 }
