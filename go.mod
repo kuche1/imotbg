@@ -5,6 +5,8 @@ go 1.26.1
 require github.com/kuche1/gonet v0.0.0-20260126221515-e2dcb49deb69
 
 require (
+	github.com/PuerkitoBio/goquery v1.12.0 // indirect
+	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/dgraph-io/badger/v4 v4.9.0 // indirect
 	github.com/dgraph-io/ristretto/v2 v2.2.0 // indirect
@@ -18,7 +20,7 @@ require (
 	go.opentelemetry.io/otel v1.37.0 // indirect
 	go.opentelemetry.io/otel/metric v1.37.0 // indirect
 	go.opentelemetry.io/otel/trace v1.37.0 // indirect
-	golang.org/x/net v0.43.0 // indirect
-	golang.org/x/sys v0.35.0 // indirect
+	golang.org/x/net v0.52.0 // indirect
+	golang.org/x/sys v0.42.0 // indirect
 	google.golang.org/protobuf v1.36.7 // indirect
 )
