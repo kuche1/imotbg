@@ -2,7 +2,6 @@ package extract
 
 import (
 	"log"
-	"slices"
 	"strconv"
 	"strings"
 
@@ -102,25 +101,32 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invali
 
 	elem := elemInfo.Find("div.Price").First()
 
-	price := strings.TrimSpace(elem.Text())
+	priceStr := strings.TrimSpace(elem.Text())
 	// log.Printf("DBG: price: %v", price)
 
-	if !strings.Contains(price, eur) {
+	if !strings.Contains(priceStr, eur) {
 		log.Printf("Price in euros not found: %v", url)
 		return 0, true
 	}
 
-	parts := strings.Split(price, eur)
+	parts := strings.Split(priceStr, eur)
 
-	price = strings.TrimSpace(parts[0])
-	price = strings.ReplaceAll(price, " ", "")
+	priceStr = strings.TrimSpace(parts[0])
+	priceStr = strings.ReplaceAll(priceStr, " ", "")
 
-	value, err := strconv.ParseFloat(price, 64)
+	price, err := strconv.ParseFloat(priceStr, 64)
 	if err != nil {
 		log.Fatal("URL `", url, "`:", err)
 	}
 
-	return value, false
+	//// actually im not sure if this really is the case I might be mistaken
+	// // the shitty website sometimes shows you listings that are outside the price range
+	// // that you have specified
+	// if price > config.PriceMax {
+	// 	return 0, true
+	// }
+
+	return price, false
 }
 
 func findLocation(elemInfo *goquery.Selection, link string) (value string, blacklisted bool) {
@@ -144,32 +150,27 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 
 	// title_lower := strings.ToLower(title)
 
-	// if len(config.BrandWhitelist) > 0 {
-	// 	found := false
+	if len(config.LocationPrefixWhitelist) > 0 {
+		found := false
 
-	// 	for _, whitelisted_title := range config.BrandWhitelist {
-	// 		whitelisted_title_lower := strings.ToLower(whitelisted_title)
+		for _, whitelisted := range config.LocationPrefixWhitelist {
+			// whitelisted_title_lower := strings.ToLower(whitelisted_title)
+			if strings.HasPrefix(location, whitelisted) {
+				found = true
+				break
+			}
+		}
 
-	// 		if strings.HasPrefix(title_lower, whitelisted_title_lower) {
-	// 			found = true
-	// 			break
-	// 		}
-	// 	}
+		if !found {
+			return "", true
+		}
+	}
 
-	// 	if !found {
-	// 		return title, true
-	// 	}
-	// }
-
-	// for _, blacklisted := range config.LocationPrefixBlacklist {
-	// 	// blacklisted := strings.ToLower(blacklisted)
-	// 	if strings.HasPrefix(location, blacklisted) {
-	// 		return "", true
-	// 	}
-	// }
-
-	if slices.Contains(config.LocationBlacklist, location) {
-		return "", true
+	for _, blacklisted := range config.LocationPrefixBlacklist {
+		// blacklisted := strings.ToLower(blacklisted)
+		if strings.HasPrefix(location, blacklisted) {
+			return "", true
+		}
 	}
 
 	return location, false

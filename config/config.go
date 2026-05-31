@@ -20,16 +20,32 @@ var ThreadsExtractListingLinks = runtime.NumCPU()
 const ListingLinkPrefix = "https:"
 
 var LinkBlacklist = []string{
-	// "https://www.mobile.bg/obiava-11767956291631060-bmw-740-li-xdrive",
+	// za remont
+	"https://www.imot.bg/obiava-1c173679076198229-prodava-tristaen-apartament-grad-sofiya-tsentar-bul-slivnitsa",
+	"https://www.imot.bg/obiava-1c175005241220903-prodava-tristaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177789507250802-prodava-dvustaen-apartament-grad-sofiya-tsentar-ul-sofroniy-vrachanski",
 }
 
 const ExtractChanBuf = 64
 
-var LocationBlacklist = []string{
-	// "град София, Филиповци",
+// active only if ccontains at lest 1 item
+var LocationPrefixWhitelist = []string{
+	"град София, Център",
+
+	// "град София, Овча купел", // covers the base, 1 and 2
+}
+
+var LocationPrefixBlacklist = []string{
+	// "град София, Обеля 2",
+	// "град София, Суходол",
+	// "град София, Люлин 9",
 	// "град София, Модерно предградие",
-	// "град София, с. Мало Бучино",
-	// "град София, Център",
-	// "град София, Надежда 3",
+	// "град София, Обеля",
+	// "град София, Илинден",
+	// "град София, Симеоново",
+	// "град София, Фондови жилища",
+	// "град София, Овча купел 1",
 	// "град София, Овча купел 2",
+	// "град София, Толстой",
+	// "град София, Филиповци",
 }
