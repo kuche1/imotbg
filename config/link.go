@@ -34,6 +34,7 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b175335919126899-prodava-dvustaen-apartament-grad-sofiya-vitosha",
 	"https://www.imot.bg/obiava-1b177029734818751-prodava-dvustaen-apartament-grad-sofiya-knyazhevo",
 	"https://www.imot.bg/obiava-1b178118565599729-prodava-dvustaen-apartament-grad-sofiya-serdika",
+	"https://www.imot.bg/obiava-1b178005823784927-prodava-dvustaen-apartament-grad-sofiya-vrabnitsa-2-ul-asen-traykov",
 
 	////// nqma/loshi/cgi snimki
 
@@ -47,6 +48,11 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b177278400657202-prodava-dvustaen-apartament-grad-sofiya-nadezhda-2",
 	"https://www.imot.bg/obiava-1c177089876512090-prodava-tristaen-apartament-grad-sofiya-tsentar-ul-tsar-samuil",
 	"https://www.imot.bg/obiava-1b177392098560761-prodava-dvustaen-apartament-grad-sofiya-vrazhdebna",
+	"https://www.imot.bg/obiava-1b177986885222097-prodava-dvustaen-apartament-grad-sofiya-benkovski-ul-bodra-smyana",
+	"https://www.imot.bg/obiava-1b178151382152646-prodava-dvustaen-apartament-grad-sofiya-serdika",
+	"https://www.imot.bg/obiava-1b177904866444144-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-knyaginya-mariya-luiza",
+	"https://www.imot.bg/obiava-1b177694961544093-prodava-dvustaen-apartament-grad-sofiya-hadzhi-dimitar",
+	"https://www.imot.bg/obiava-1b177202603689393-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",
 
 	//// super s4upen - beyond remont
 

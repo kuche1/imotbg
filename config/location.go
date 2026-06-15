@@ -35,6 +35,8 @@ var LocationPrefixBlacklist = []string{
 	"град София, с. ", // selo XYZ
 	"град София, Ботунец",
 	"град София, гр. Нови Искър",
+	"град София, Филиповци",
+	"град София, Драгалевци",
 
 	//// na sever ot centura
 	"град София, Свобода",
@@ -42,6 +44,7 @@ var LocationPrefixBlacklist = []string{
 	"град София, Модерно предградие",
 	"град София, Надежда",
 	"град София, Захарна фабрика",
+	"град София, Толстой",
 
 	//// shit lokaciq (daleche tn)
 	"град София, Горубляне",         // izglejda s ultra shit infrastruktura
