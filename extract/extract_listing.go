@@ -166,5 +166,9 @@ func findArea(elemParams *goquery.Selection, link string) (_value int64, _blackl
 		return 0, true
 	}
 
+	if area > config.AreaMax {
+		return 0, true
+	}
+
 	return area, false
 }

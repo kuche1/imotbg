@@ -1,61 +1,15 @@
 package config
 
-// active only if ccontains at lest 1 item
-var LocationPrefixWhitelist = []string{
-	// следват метроро червената линия от центъра (без него) до края
-	"град София, Младост 4",
-	"град София, Малинова долина",
-	"град София, Младост 2",
-	"град София, Младост 3",
-	"град София, Младост 1",
-	"град София, Младост 1А",
-	"град София, Дианабад",
-	"град София, Изток",
-	"град София, Дървеница",
-	"град София, Мусагеница",
-	"град София, Изгрев",
-	"град София, Лозенец",
-
-	// "град София, Център",
-	// "град София, Овча купел", // covers the base, 1 and 2
-}
-
-var LocationPrefixBlacklist = []string{
-	// "град София, Люлин", // moje bi ne trqbva taka da ignorirav vsi4ki lulini
-	// "град София, с. Мало Бучино",
-	// "град София, Орландовци",
-	// "град София, Студентски град",
-	// "град София, с. Лозен",
-	// "град София, Банишора",
-	// "град София, Овча купел",
-	// "град София, Карпузица",
-	// "град София, Обеля",
-
-	// // izvun sofiq
-	// "град София, Бояна",
-	// "град София, м-т Гърдова глава",
-	// "град София, Суходол",
-
-	// // "град София, Суходол",
-	// // "град София, Люлин 9",
-	// // "град София, Модерно предградие",
-	// // "град София, Обеля",
-	// // "град София, Илинден",
-	// // "град София, Симеоново",
-	// // "град София, Фондови жилища",
-	// // "град София, Овча купел 1",
-	// // "град София, Овча купел 2",
-	// // "град София, Толстой",
-	// // "град София, Филиповци",
-}
-
 var LinkBlacklist = []string{
 	////// za remont
+
 	// "https://www.imot.bg/obiava-1c173679076198229-prodava-tristaen-apartament-grad-sofiya-tsentar-bul-slivnitsa",
 	// "https://www.imot.bg/obiava-1c175005241220903-prodava-tristaen-apartament-grad-sofiya-tsentar",
 	// "https://www.imot.bg/obiava-1b177789507250802-prodava-dvustaen-apartament-grad-sofiya-tsentar-ul-sofroniy-vrachanski",
+
 	////// postroen no bez nishto vutre
 	// NOTE: imashe edin nqkoi koito IMA GOTOVA banq (kato o4evidno ne e v tozi spisuk)
+
 	"https://www.imot.bg/obiava-1b141233159470515-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1b163653993995564-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1b147505965186133-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
@@ -76,11 +30,43 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b178056291621258-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1a148033075659734-prodava-ednostaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1a147506110948376-prodava-ednostaen-apartament-grad-sofiya-malinova-dolina",
-	////// nqma snimki otvutre / cgi snimki / nqma snimki
+	"https://www.imot.bg/obiava-1b178152527658636-prodava-dvustaen-apartament-grad-sofiya-moderno-predgradie",
+	"https://www.imot.bg/obiava-1b175335919126899-prodava-dvustaen-apartament-grad-sofiya-vitosha",
+	"https://www.imot.bg/obiava-1b177029734818751-prodava-dvustaen-apartament-grad-sofiya-knyazhevo",
+	"https://www.imot.bg/obiava-1b178118565599729-prodava-dvustaen-apartament-grad-sofiya-serdika",
+
+	////// nqma/loshi/cgi snimki
+
 	"https://www.imot.bg/obiava-1b177754380218825-prodava-dvustaen-apartament-grad-sofiya-suhata-reka",
 	"https://www.imot.bg/obiava-1b178031461376813-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1b177970053215072-prodava-dvustaen-apartament-grad-sofiya-darvenitsa-bul-andrey-lyapchev",
 	"https://www.imot.bg/obiava-1b177999892723954-prodava-dvustaen-apartament-grad-sofiya-mladost-3",
 	"https://www.imot.bg/obiava-1b177305343027129-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1b176770861199951-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b178047036137842-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b177278400657202-prodava-dvustaen-apartament-grad-sofiya-nadezhda-2",
+	"https://www.imot.bg/obiava-1c177089876512090-prodava-tristaen-apartament-grad-sofiya-tsentar-ul-tsar-samuil",
+	"https://www.imot.bg/obiava-1b177392098560761-prodava-dvustaen-apartament-grad-sofiya-vrazhdebna",
+
+	//// super s4upen - beyond remont
+
+	"https://www.imot.bg/obiava-1d175465115813246-prodava-chetiristaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b175005994592048-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b175005241220903-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1c175465099419565-prodava-tristaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1d177020934881050-prodava-chetiristaen-apartament-grad-sofiya-oborishte",
+
+	//// lokaciqta e luja
+
+	"https://www.imot.bg/obiava-1c177978613173915-prodava-tristaen-apartament-grad-sofiya-druzhba-2",
+	"https://www.imot.bg/obiava-1c166434162354666-prodava-tristaen-apartament-grad-sofiya-7-mi-11-ti-kilometar",
+
+	//// ako iska nqkoi moje da mi razbie prozoreca i da vleze ez
+
+	"https://www.imot.bg/obiava-1b176880848839354-prodava-dvustaen-apartament-grad-sofiya-vitosha",
+	"https://www.imot.bg/obiava-1b178031327895576-prodava-dvustaen-apartament-grad-sofiya-vitosha",
+
+	//// other
+
+	"https://www.imot.bg/obiava-1b177133940645532-prodava-dvustaen-apartament-grad-sofiya-lagera-ul-gebedzhe", // parter + za remont + skupo
 }
