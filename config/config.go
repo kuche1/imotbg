@@ -17,8 +17,6 @@ const Currency = "EUR"
 
 var ThreadsExtractListingLinks = runtime.NumCPU()
 
-const ListingLinkPrefix = "https:"
-
 const ExtractChanBuf = 64
 
 // da vkluchva li garaj zaduljitelno

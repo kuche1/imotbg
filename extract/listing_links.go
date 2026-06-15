@@ -9,6 +9,8 @@ import (
 	"github.com/kuche1/imotbg/config"
 )
 
+const _ListingLinkPrefix = "https:"
+
 func extractListingLinks(searchPages <-chan *goquery.Document, listingLinks chan<- string) {
 	defer close(listingLinks)
 
@@ -33,7 +35,7 @@ func extractListingLinksThr(searchPages <-chan *goquery.Document, listingLinks c
 				return
 			}
 
-			href = config.ListingLinkPrefix + href
+			href = _ListingLinkPrefix + href
 
 			if slices.Contains(config.LinkBlacklist, href) {
 				return
