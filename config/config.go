@@ -8,24 +8,11 @@ const NetCachedResponseValiditySec = 60 * 60 * 10 // 10 hours
 
 const LastPagePossible = 25
 
-// in EUR
-const PriceMin = 90_000
-const PriceMax = 150_000
-const PriceStep = 10_000 // if this is too big you may miss some listings
-
 const Currency = "EUR"
 
 var ThreadsExtractListingLinks = runtime.NumCPU()
 
 const ExtractChanBuf = 64
-
-// da vkluchva li garaj zaduljitelno
-const Garaj = false
-
-// Имоти въведени в експлоатация
-const Zavurshen = true
-
-const AreaMin = 0
 
 // active only if ccontains at lest 1 item
 var LocationPrefixWhitelist = []string{
