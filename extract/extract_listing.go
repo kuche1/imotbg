@@ -45,51 +45,21 @@ func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House
 			continue
 		}
 
-		// title, blacklisted := findTitle(elem_info, config)
-		// if blacklisted {
-		// 	continue
-		// }
+		elemParams := pageData.doc.Find("div.adParams").First()
+		if elemParams.Length() == 0 {
+			log.Fatalf("Could not find params: %v", pageData.link)
+		}
 
-		// engineType, blacklisted := findEngineType(elem_params, config)
-		// if blacklisted {
-		// 	continue
-		// }
-
-		// horsepower, blacklisted := findHorsepower(elem_params, config)
-		// if blacklisted {
-		// 	continue
-		// }
-
-		// yearProduced, blacklisted := findYearProduced(elem_params, config)
-		// if blacklisted {
-		// 	continue
-		// }
-
-		// mialage, blacklisted := findMialage(elem_params, config)
-		// if blacklisted {
-		// 	continue
-		// }
-
-		// gearbox, blacklisted := findGearbox(elem_params, config)
-		// if blacklisted {
-		// 	continue
-		// }
-
-		// houses <- car.NewCar(
-		// 	page_data.link,
-		// 	title,
-		// 	price,
-		// 	engineType,
-		// 	horsepower,
-		// 	yearProduced,
-		// 	mialage,
-		// 	gearbox,
-		// )
+		area, invalid := findArea(elemParams, pageData.link)
+		if invalid {
+			continue
+		}
 
 		houses <- house.NewHouse(
 			pageData.link,
 			price,
 			location,
+			area,
 		)
 	}
 }
@@ -176,153 +146,25 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 	return location, false
 }
 
-// func findEngineType(elem_params *goquery.Selection, config *configuration.Config) (_engineType string, _blacklisted bool) {
-// 	elem := elem_params.Find("div.item.dvigatel").First()
-// 	// NOTE: original python code: soup.find("div", class_="item dvigatel")
+func findArea(elemParams *goquery.Selection, link string) (_value int64, _blacklisted bool) {
+	elem := elemParams.Find("strong").First()
 
-// 	elem = elem.Find("div.mpInfo")
+	areaStr := elem.Text()
 
-// 	engineType := elem.Text()
+	suffix := " m2"
+	if !strings.HasSuffix(areaStr, suffix) {
+		log.Fatalf("Unexpected area format `%v`: %v", areaStr, link)
+	}
+	areaStr = strings.TrimSuffix(areaStr, suffix)
 
-// 	if slices.Contains(config.EngineTypeBlacklist, engineType) {
-// 		return "", true
-// 	}
+	area, err := strconv.ParseInt(areaStr, 10, 64)
+	if err != nil {
+		log.Fatalf("Area not a number for `%v`: %v", link, err)
+	}
 
-// 	return engineType, false
-// }
+	if area < config.AreaMin {
+		return 0, true
+	}
 
-// func findHorsepower(elem_params *goquery.Selection, config *configuration.Config) (_value int64, _blacklisted bool) {
-// 	elem := elem_params.Find("div.item.moshtnost").First()
-// 	// NOTE: original python code: soup.find("div", class_="item moshtnost")
-
-// 	if elem.Length() == 0 {
-// 		if config.HorsepowerMissingOk {
-// 			return -1, false
-// 		}
-// 		return -1, true
-// 	}
-
-// 	elem = elem.Find("div.mpInfo")
-
-// 	valueAsStr := elem.Text()
-
-// 	suffix := " к.с."
-// 	if !strings.HasSuffix(valueAsStr, suffix) {
-// 		panic("The site must have changed")
-// 	}
-// 	valueAsStr = strings.TrimSuffix(valueAsStr, suffix)
-
-// 	valueAsInt, err := strconv.ParseInt(valueAsStr, 10, 64)
-// 	if err != nil {
-// 		panic(fmt.Sprintf("The site must have changed: %v", err))
-// 	}
-
-// 	if valueAsInt < config.HorsepowerMin {
-// 		return -1, true
-// 	}
-
-// 	return valueAsInt, false
-// }
-
-// func findYearProduced(elem_params *goquery.Selection, config *configuration.Config) (_year int16, _blacklisted bool) {
-// 	elem := elem_params.Find("div.item.proizvodstvo").First()
-// 	// NOTE: original python code: elem_params.find("div", class_="item proizvodstvo")
-
-// 	if elem.Length() == 0 {
-// 		if config.YearProducedMissingOk {
-// 			return -1, false
-// 		}
-// 		return -1, true
-// 	}
-
-// 	elem = elem.Find("div.mpInfo")
-
-// 	monthAndYear := elem.Text()
-
-// 	parts := strings.Split(monthAndYear, " ")
-// 	if len(parts) != 2 {
-// 		panic("Unexpected month and year format")
-// 	}
-
-// 	yearAsStr := parts[1]
-
-// 	yearAsInt64, err := strconv.ParseInt(yearAsStr, 10, 16)
-// 	if err != nil {
-// 		panic(fmt.Sprintf("Not a valid year: %v", err))
-// 	}
-// 	yearAsInt := int16(yearAsInt64)
-
-// 	if yearAsInt < config.YearProducedMin {
-// 		return -1, true
-// 	}
-
-// 	if yearAsInt > config.YearProducedMax {
-// 		return -1, true
-// 	}
-
-// 	if len(config.YearProducedWhitelist) > 0 {
-// 		if !slices.Contains(config.YearProducedWhitelist, yearAsInt) {
-// 			return -1, true
-// 		}
-// 	}
-
-// 	return yearAsInt, false
-// }
-
-// func findMialage(elem_params *goquery.Selection, config *configuration.Config) (_mialage int64, _blacklisted bool) {
-// 	elem := elem_params.Find("div.item.probeg").First()
-// 	// NOTE: original python code: soup.find("div", class_="item probeg")
-
-// 	if elem.Length() == 0 {
-// 		if config.MialageMissingOk {
-// 			return 999_999, false
-// 		}
-// 		return -1, true
-// 	}
-
-// 	elem = elem.Find("div.mpInfo")
-
-// 	mialageAsStr := elem.Text()
-
-// 	suffix := " км"
-
-// 	if !strings.HasSuffix(mialageAsStr, suffix) {
-// 		panic(fmt.Sprintf("Expected suffix `%v`: %v", suffix, mialageAsStr))
-// 	}
-
-// 	mialageAsStr = strings.TrimSuffix(mialageAsStr, suffix)
-
-// 	mialageAsInt, err := strconv.ParseInt(mialageAsStr, 10, 64)
-// 	if err != nil {
-// 		panic(fmt.Sprintf("Not a valid mialage: %v", err))
-// 	}
-
-// 	if mialageAsInt < config.MialageMin {
-// 		return -1, true
-// 	}
-
-// 	if mialageAsInt > config.MialageMax {
-// 		return -1, true
-// 	}
-
-// 	return mialageAsInt, false
-// }
-
-// func findGearbox(elem_params *goquery.Selection, config *configuration.Config) (_gearbox string, _blacklisted bool) {
-// 	elem := elem_params.Find("div.item.skorosti").First()
-// 	// NOTE: original python code: soup.find("div", class_="item skorosti")
-
-// 	if elem.Length() == 0 {
-// 		panic("Gearbox missing")
-// 	}
-
-// 	elem = elem.Find("div.mpInfo")
-
-// 	gearbox := elem.Text()
-
-// 	if slices.Contains(config.GearboxBlacklist, gearbox) {
-// 		return "", true
-// 	}
-
-// 	return gearbox, false
-// }
+	return area, false
+}
