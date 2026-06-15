@@ -64,6 +64,5 @@ func extractSearchPagesWithinPriceRange(
 
 	if pageNum >= config.LastPagePossible {
 		log.Fatal("The very last search page was reached, you need to reduce the price step")
-		// log.Printf("The very last search page was reached, it is probable that some listings were omitted, you need to reduce the price step")
 	}
 }
