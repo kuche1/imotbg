@@ -28,10 +28,12 @@ var LinkBlacklist = []string{
 
 const ExtractChanBuf = 64
 
+// da vkluchva li garaj zaduljitelno
+const Garaj = false
+
 // active only if ccontains at lest 1 item
 var LocationPrefixWhitelist = []string{
-	"град София, Център",
-
+	// "град София, Център",
 	// "град София, Овча купел", // covers the base, 1 and 2
 }
 
