@@ -7,3 +7,6 @@ const Garaj = false
 const Zavurshen = true
 
 const AreaMin = 0
+
+// dali da sa vklucheni ednostainite
+const EdnostaenOk = true
