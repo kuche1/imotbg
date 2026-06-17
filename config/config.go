@@ -1,4 +1,4 @@
-package libconfig
+package config
 
 type Config struct {
 	ZaduljitelnoGotovZaNanasqne bool
