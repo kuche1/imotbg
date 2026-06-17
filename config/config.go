@@ -33,7 +33,7 @@ func NewConfig() *Config {
 			"4-СТАЕН":       true,
 			"МНОГОСТАЕН":    true,
 			"МЕЗОНЕТ":       true,
-			"АТЕЛИЕ, ТАВАН": true,
+			"АТЕЛИЕ, ТАВАН": false,
 		},
 	}
 }
