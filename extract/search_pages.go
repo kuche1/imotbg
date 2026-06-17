@@ -17,10 +17,10 @@ func extractSearchPages(conf *config.Config, net *gonet.Net, results chan<- *goq
 
 	var wg sync.WaitGroup
 
-	priceMax := define.PriceMax
+	priceMax := conf.PriceMaxEur
 
-	for priceMax >= define.PriceMin {
-		priceMin := max(priceMax-define.PriceStep, define.PriceMin)
+	for priceMax >= conf.PriceMinEur {
+		priceMin := max(priceMax-define.PriceStepEur, conf.PriceMinEur)
 
 		// otherwise we are going to capture references ot the variables, and by the time
 		// the thread has started the values will have changed

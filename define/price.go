@@ -1,6 +1,3 @@
 package define
 
-// in EUR
-const PriceMin = 90_000
-const PriceMax = 150_000
-const PriceStep = 10_000 // if this is too big you may miss some listings
+const PriceStepEur = 10_000 // if this is too big you may miss some listings
