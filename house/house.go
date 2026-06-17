@@ -11,36 +11,22 @@ type House struct {
 	PriceEur float64
 	Location string
 	AreaM2   int64
-	// Title        string
-	// EngineType   string
-	// Horsepower   int64
-	// YearProduced int16
-	// Mialage      int64
-	// Gearbox      string
+	Stai     string
 }
 
 func NewHouse(
 	link string,
-	price float64,
+	priceEur float64,
 	location string,
-	area int64,
-	// title string,
-	// engineType string,
-	// horsepower int64,
-	// yearProduced int16,
-	// mialage int64,
-	// gearbox string,
+	areaM2 int64,
+	stai string,
 ) *House {
 	return &House{
 		Link:     link,
-		PriceEur: price,
+		PriceEur: priceEur,
 		Location: location,
-		AreaM2:   area,
-		// EngineType:   engineType,
-		// Horsepower:   horsepower,
-		// YearProduced: yearProduced,
-		// Mialage:      mialage,
-		// Gearbox:      gearbox,
+		AreaM2:   areaM2,
+		Stai:     stai,
 	}
 }
 
@@ -51,15 +37,12 @@ func (self *House) Sprintf() string {
     price: %v [EUR]
     location: %v
     area: %v [m2]
+    rooms: %v
 `,
 		self.Link,
 		humanize.Commaf(self.PriceEur),
 		self.Location,
 		self.AreaM2,
-		// self.EngineType,
-		// self.Horsepower,
-		// self.YearProduced,
-		// self.Mialage,
-		// self.Gearbox,
+		self.Stai,
 	)
 }

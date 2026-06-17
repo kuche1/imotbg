@@ -41,7 +41,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			continue
 		}
 
-		location, invalid := findLocation(elemInfo, pageData.link)
+		location, stai, invalid := findLocation(elemInfo, pageData.link)
 		if invalid {
 			continue
 		}
@@ -61,6 +61,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			price,
 			location,
 			area,
+			stai,
 		)
 	}
 }
@@ -100,7 +101,7 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invali
 	return price, false
 }
 
-func findLocation(elemInfo *goquery.Selection, link string) (value string, blacklisted bool) {
+func findLocation(elemInfo *goquery.Selection, link string) (_location string, _stai string, _blacklisted bool) {
 	elemTitle := elemInfo.Find("div.obTitle").First()
 
 	location := strings.TrimSpace(elemTitle.Text())
@@ -116,6 +117,8 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 	// parts[1] ->     град София, Овча купел 2
 	// parts[2] ->     ул. Светла (not always present)
 	// parts[3] ->     Обява: 1c171137181218748
+
+	///// location
 
 	location = strings.TrimSpace(parts[1])
 
@@ -133,18 +136,31 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 		}
 
 		if !found {
-			return "", true
+			return "", "", true
 		}
 	}
 
 	for _, blacklisted := range define.LocationPrefixBlacklist {
 		// blacklisted := strings.ToLower(blacklisted)
 		if strings.HasPrefix(location, blacklisted) {
-			return "", true
+			return "", "", true
 		}
 	}
 
-	return location, false
+	///// stai
+
+	stai := parts[0]
+
+	pref := "Продава "
+	if !strings.HasPrefix(stai, pref) {
+		log.Fatalf("Could not find prefix `%v` in `%v`: %v", pref, stai, link)
+	}
+
+	stai = stai[len(pref):]
+
+	/////
+
+	return location, stai, false
 }
 
 func findArea(conf *config.Config, elemParams *goquery.Selection, link string) (_value int64, _blacklisted bool) {
