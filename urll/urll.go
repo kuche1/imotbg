@@ -45,6 +45,8 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 	// y МЕЗОНЕТ
 	// n АТЕЛИЕ, ТАВАН
 	url += "3~4~5~6~"
+	// TODO: moje bi vmesto da si igraq s URL-a, prosto
+	// da parse-vam dali e 1-staen, 2-staen i tn
 
 	///
 
