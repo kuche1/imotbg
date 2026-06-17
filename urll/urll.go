@@ -52,7 +52,7 @@ func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 
 	///
 
-	if config.Zavurshen {
+	if config.GotovZaNanasqne {
 		// y Завършени - Имоти въведени в експлоатация
 		// n В строеж или имоти НЕ въведени в експлоатация
 		url += "&ybuild_type=1~"
