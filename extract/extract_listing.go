@@ -13,7 +13,7 @@ import (
 func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House) {
 	defer close(houses)
 
-	// TODO: we can actually multithread this
+	// IMPROVE: we can actually multithread this
 
 	for pageData := range listingLinks {
 		elemInfo := pageData.doc.Find("div.contactsBox").First()
