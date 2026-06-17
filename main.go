@@ -20,11 +20,14 @@ func main() {
 
 	slices.SortFunc(
 		houses,
-		func(a *house.House, b *house.House) int {
-			if a.AreaM2 < b.AreaM2 {
+		func(houseA *house.House, houseB *house.House) int {
+			a := float64(houseA.AreaM2) / float64(houseA.PriceEur)
+			b := float64(houseB.AreaM2) / float64(houseB.PriceEur)
+
+			if a < b {
 				return -1
 			}
-			if a.AreaM2 == b.AreaM2 {
+			if a == b {
 				return 0
 			}
 			return 1

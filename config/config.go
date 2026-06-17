@@ -20,8 +20,8 @@ func NewConfig() *Config {
 		ZaduljitelnoGotovZaNanasqne: true,
 		ZaduljitelnoGaraj:           false,
 
-		PriceMinEur: 90_000,
-		PriceMaxEur: 180_000,
+		PriceMinEur: 0,
+		PriceMaxEur: 190_000,
 
 		PloshtMinM2: 0,
 		PloshtMaxM2: math.MaxInt64,

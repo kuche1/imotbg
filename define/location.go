@@ -19,10 +19,8 @@ var LocationPrefixWhitelist = []string{
 
 var LocationPrefixBlacklist = []string{
 	"град София, Люлин",
-	"град София, с. Мало Бучино",
 	"град София, Орландовци",
 	"град София, Студентски град",
-	"град София, с. Лозен",
 	"град София, Банишора",
 	"град София, Овча купел",
 	"град София, Карпузица",
@@ -34,12 +32,13 @@ var LocationPrefixBlacklist = []string{
 	"град София, Суходол",
 	"град София, с. ", // selo XYZ
 	"град София, Ботунец",
-	"град София, гр. Нови Искър",
 	"град София, Филиповци",
 	"град София, Драгалевци",
 	"град София, Симеоново",
 	"град София, Витоша",
 	"град София, Княжево",
+	"град София, м-т Детски град",
+	"град София, гр. ", // grad XYZ
 
 	//// na sever ot centura
 	"град София, Свобода",
@@ -60,6 +59,8 @@ var LocationPrefixBlacklist = []string{
 	"град София, Хаджи Димитър",
 	"град София, Бъкстон",    // moje s X10 no toi e na 30min (ponqkoga pove4e)
 	"град София, Разсадника", // 30min v metroto - ne e TOLKOVA zle actually
+	"град София, Зона Б-18",  // 24min v metroto
+	"град София, Лагера",
 
 	//// shit lokaciq (daleche tn)
 	"град София, Горубляне",         // izglejda s ultra shit infrastruktura

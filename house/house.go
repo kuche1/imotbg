@@ -33,11 +33,11 @@ func NewHouse(
 func (self *House) Sprintf() string {
 	return fmt.Sprintf(
 		`House:
-    link: %v
-    price: %v [EUR]
+    link    : %v
+    price   : %v [EUR]
     location: %v
-    area: %v [m2]
-    rooms: %v
+    area    : %v [m2]
+    rooms   : %v
 `,
 		self.Link,
 		humanize.Commaf(self.PriceEur),
