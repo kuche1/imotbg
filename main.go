@@ -21,10 +21,10 @@ func main() {
 	slices.SortFunc(
 		houses,
 		func(a *house.House, b *house.House) int {
-			if a.Area < b.Area {
+			if a.AreaM2 < b.AreaM2 {
 				return -1
 			}
-			if a.Area == b.Area {
+			if a.AreaM2 == b.AreaM2 {
 				return 0
 			}
 			return 1

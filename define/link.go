@@ -24,6 +24,7 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b177904866444144-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-knyaginya-mariya-luiza",
 	"https://www.imot.bg/obiava-1b177694961544093-prodava-dvustaen-apartament-grad-sofiya-hadzhi-dimitar",
 	"https://www.imot.bg/obiava-1b177202603689393-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",
+	"https://www.imot.bg/obiava-1b176822292603670-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 
 	//// super s4upen - beyond remont
 
@@ -32,6 +33,7 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b175005241220903-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1c175465099419565-prodava-tristaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1d177020934881050-prodava-chetiristaen-apartament-grad-sofiya-oborishte",
+	"https://www.imot.bg/obiava-1b178160674433445-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-slivnitsa",
 
 	//// lokaciqta e luja
 

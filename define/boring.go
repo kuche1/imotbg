@@ -8,8 +8,6 @@ const NetCachedResponseValiditySec = 60 * 60 * 10 // 10 hours
 
 const LastPagePossible = 25
 
-const Currency = "EUR"
-
 var ThreadsExtractListingLinks = runtime.NumCPU()
 
 const ExtractChanBuf = 64

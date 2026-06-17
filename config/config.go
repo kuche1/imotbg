@@ -13,6 +13,6 @@ func NewConfig() *Config {
 		EdnostaenOk:                 true,
 
 		PriceMinEur: 90_000,
-		PriceMaxEur: 150_000,
+		PriceMaxEur: 160_000,
 	}
 }

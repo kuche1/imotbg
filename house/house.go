@@ -4,14 +4,13 @@ import (
 	"fmt"
 
 	"github.com/dustin/go-humanize"
-	"github.com/kuche1/imotbg/define"
 )
 
 type House struct {
 	Link     string
-	Price    float64
+	PriceEur float64
 	Location string
-	Area     int64
+	AreaM2   int64
 	// Title        string
 	// EngineType   string
 	// Horsepower   int64
@@ -34,9 +33,9 @@ func NewHouse(
 ) *House {
 	return &House{
 		Link:     link,
-		Price:    price,
+		PriceEur: price,
 		Location: location,
-		Area:     area,
+		AreaM2:   area,
 		// EngineType:   engineType,
 		// Horsepower:   horsepower,
 		// YearProduced: yearProduced,
@@ -49,14 +48,14 @@ func (self *House) Sprintf() string {
 	return fmt.Sprintf(
 		`House:
     link: %v
-    price: %v %v
+    price: %v [EUR]
     location: %v
-    area: %v
+    area: %v [m2]
 `,
 		self.Link,
-		humanize.Commaf(self.Price), define.Currency,
+		humanize.Commaf(self.PriceEur),
 		self.Location,
-		self.Area,
+		self.AreaM2,
 		// self.EngineType,
 		// self.Horsepower,
 		// self.YearProduced,
