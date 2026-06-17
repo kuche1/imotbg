@@ -28,7 +28,8 @@ func main() {
 				return 0
 			}
 			return 1
-		})
+		},
+	)
 
 	for _, house := range houses {
 		repr := house.Sprintf()
