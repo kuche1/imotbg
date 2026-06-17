@@ -25,7 +25,7 @@ func Main(conf *config.Config) chan *house.House {
 	go downloadListingPages(net, listingLinks, listingPageData)
 
 	houses := make(chan *house.House, define.ExtractChanBuf)
-	go extractHouses(listingPageData, houses)
+	go extractHouses(conf, listingPageData, houses)
 
 	return houses
 }

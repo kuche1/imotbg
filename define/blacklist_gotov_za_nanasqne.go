@@ -33,4 +33,6 @@ var BlacklistNeGotoviZaNanasqne = []string{
 	"https://www.imot.bg/obiava-1b176814728134115-prodava-dvustaen-apartament-grad-sofiya-bakston",
 	"https://www.imot.bg/obiava-1b178033203140731-prodava-dvustaen-apartament-grad-sofiya-mladost-4",
 	"https://www.imot.bg/obiava-1b178031557159246-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1c176010069009881-prodava-tristaen-apartament-grad-sofiya-reduta",
+	"https://www.imot.bg/obiava-1c177209382847170-prodava-tristaen-apartament-grad-sofiya-reduta",
 }

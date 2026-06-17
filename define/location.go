@@ -38,6 +38,7 @@ var LocationPrefixBlacklist = []string{
 	"град София, Филиповци",
 	"град София, Драгалевци",
 	"град София, Симеоново",
+	"град София, Витоша",
 
 	//// na sever ot centura
 	"град София, Свобода",
@@ -49,6 +50,7 @@ var LocationPrefixBlacklist = []string{
 	"град София, Илиянци",
 
 	//// nqma da mi e (super) odobno do rabota
+	//// TODO: tova trqbva da go re-evaluate-na zashtoto namerih edin brutalen 106 kvadrata
 	"град София, Красна поляна 3",
 	"град София, Красна поляна 1", // + do fakulteta e
 	"град София, Красна поляна 2", // + do fakulteta e

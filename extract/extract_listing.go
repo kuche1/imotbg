@@ -6,11 +6,12 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/kuche1/imotbg/config"
 	"github.com/kuche1/imotbg/define"
 	"github.com/kuche1/imotbg/house"
 )
 
-func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House) {
+func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, houses chan *house.House) {
 	defer close(houses)
 
 	// IMPROVE: we can actually multithread this
@@ -50,7 +51,7 @@ func extractHouses(listingLinks chan *_ListingPageData, houses chan *house.House
 			log.Fatalf("Could not find params: %v", pageData.link)
 		}
 
-		area, invalid := findArea(elemParams, pageData.link)
+		area, invalid := findArea(conf, elemParams, pageData.link)
 		if invalid {
 			continue
 		}
@@ -146,7 +147,7 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 	return location, false
 }
 
-func findArea(elemParams *goquery.Selection, link string) (_value int64, _blacklisted bool) {
+func findArea(conf *config.Config, elemParams *goquery.Selection, link string) (_value int64, _blacklisted bool) {
 	elem := elemParams.Find("strong").First()
 
 	areaStr := elem.Text()
@@ -162,11 +163,11 @@ func findArea(elemParams *goquery.Selection, link string) (_value int64, _blackl
 		log.Fatalf("Area not a number for `%v`: %v", link, err)
 	}
 
-	if area < define.AreaMin {
+	if area < conf.PloshtMinM2 {
 		return 0, true
 	}
 
-	if area > define.AreaMax {
+	if area > conf.PloshtMaxM2 {
 		return 0, true
 	}
 
