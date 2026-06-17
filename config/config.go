@@ -7,6 +7,7 @@ import "math"
 
 type Config struct {
 	ZaduljitelnoGotovZaNanasqne bool
+	ZaduljitelnoGaraj           bool
 	EdnostaenOk                 bool
 	PriceMinEur                 int
 	PriceMaxEur                 int
@@ -17,6 +18,7 @@ type Config struct {
 func NewConfig() *Config {
 	return &Config{
 		ZaduljitelnoGotovZaNanasqne: true,
+		ZaduljitelnoGaraj:           false,
 		EdnostaenOk:                 true,
 
 		PriceMinEur: 90_000,

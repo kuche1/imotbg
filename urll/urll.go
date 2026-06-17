@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/kuche1/imotbg/config"
-	"github.com/kuche1/imotbg/define"
 )
 
 // TODO: this is suspicious, add a print for the finished URL
@@ -22,7 +21,7 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 
 	///
 
-	if define.Garaj {
+	if conf.ZaduljitelnoGaraj {
 		url += "/s-garazh"
 	}
 
