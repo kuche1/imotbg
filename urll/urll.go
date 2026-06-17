@@ -14,7 +14,7 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 
 	///
 
-	if define.EdnostaenOk {
+	if conf.EdnostaenOk {
 		url += "/ednostaen"
 	} else {
 		url += "/dvustaen"
@@ -34,7 +34,7 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 
 	url += "?type_home="
 
-	if define.EdnostaenOk {
+	if conf.EdnostaenOk {
 		// y 1-СТАЕН
 		url += "2~"
 	}
