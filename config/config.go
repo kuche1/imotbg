@@ -9,7 +9,8 @@ type Config struct {
 func NewConfig() *Config {
 	return &Config{
 		ZaduljitelnoGotovZaNanasqne: true,
-		PriceMinEur:                 90_000,
-		PriceMaxEur:                 150_000,
+
+		PriceMinEur: 90_000,
+		PriceMaxEur: 150_000,
 	}
 }
