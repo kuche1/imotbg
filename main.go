@@ -4,10 +4,13 @@ import (
 	"fmt"
 
 	"github.com/kuche1/imotbg/extract"
+	"github.com/kuche1/imotbg/libconfig"
 )
 
 func main() {
-	houses := extract.Main()
+	config := libconfig.NewConfig()
+
+	houses := extract.Main(config)
 
 	for house := range houses {
 		repr := house.Sprintf()

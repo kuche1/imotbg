@@ -4,11 +4,12 @@ import (
 	"fmt"
 
 	"github.com/kuche1/imotbg/define"
+	"github.com/kuche1/imotbg/libconfig"
 )
 
 // TODO: this is suspicious, add a print for the finished URL
 
-func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
+func Generate(config *libconfig.Config, pageNum int, priceMinEur int, priceMaxEur int) string {
 	url := "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya"
 
 	///
@@ -52,7 +53,7 @@ func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 
 	///
 
-	if define.GotovZaNanasqne {
+	if config.ZaduljitelnoGotovZaNanasqne {
 		// y Завършени - Имоти въведени в експлоатация
 		// n В строеж или имоти НЕ въведени в експлоатация
 		url += "&ybuild_type=1~"

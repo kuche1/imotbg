@@ -8,10 +8,11 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/kuche1/gonet"
 	"github.com/kuche1/imotbg/define"
+	"github.com/kuche1/imotbg/libconfig"
 	"github.com/kuche1/imotbg/urll"
 )
 
-func extractSearchPages(net *gonet.Net, results chan<- *goquery.Document) {
+func extractSearchPages(config *libconfig.Config, net *gonet.Net, results chan<- *goquery.Document) {
 	defer close(results)
 
 	var wg sync.WaitGroup
@@ -27,7 +28,7 @@ func extractSearchPages(net *gonet.Net, results chan<- *goquery.Document) {
 		anonPriceMax := priceMax
 
 		wg.Go(func() {
-			extractSearchPagesWithinPriceRange(net, results, anonPriceMin, anonPriceMax)
+			extractSearchPagesWithinPriceRange(config, net, results, anonPriceMin, anonPriceMax)
 		})
 
 		priceMax = priceMin - 1
@@ -37,6 +38,7 @@ func extractSearchPages(net *gonet.Net, results chan<- *goquery.Document) {
 }
 
 func extractSearchPagesWithinPriceRange(
+	config *libconfig.Config,
 	net *gonet.Net,
 	results chan<- *goquery.Document,
 	priceMin int,
@@ -45,7 +47,7 @@ func extractSearchPagesWithinPriceRange(
 	var pageNum int
 
 	for pageNum = 1; pageNum <= define.LastPagePossible; pageNum++ {
-		url := urll.Generate(pageNum, priceMin, priceMax)
+		url := urll.Generate(config, pageNum, priceMin, priceMax)
 
 		rawRespBytes := net.Req(url)
 
