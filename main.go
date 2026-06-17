@@ -13,4 +13,6 @@ func main() {
 		repr := house.Sprintf()
 		fmt.Printf("%v\n", repr)
 	}
+
+	// TODO: add average price
 }

@@ -6,6 +6,8 @@ import (
 	"github.com/kuche1/imotbg/config"
 )
 
+// TODO: this is suspicious, add a print for the finished URL
+
 func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 	url := "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya"
 
