@@ -1,4 +1,4 @@
-package config
+package define
 
 // in EUR
 const PriceMin = 90_000

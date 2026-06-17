@@ -1,4 +1,4 @@
-package config
+package define
 
 var LinkBlacklist = []string{
 	////// za remont

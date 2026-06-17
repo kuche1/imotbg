@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/dustin/go-humanize"
-	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/define"
 )
 
 type House struct {
@@ -54,7 +54,7 @@ func (self *House) Sprintf() string {
     area: %v
 `,
 		self.Link,
-		humanize.Commaf(self.Price), config.Currency,
+		humanize.Commaf(self.Price), define.Currency,
 		self.Location,
 		self.Area,
 		// self.EngineType,

@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/define"
 )
 
 const _ListingLinkPrefix = "https:"
@@ -16,7 +16,7 @@ func extractListingLinks(searchPages <-chan *goquery.Document, listingLinks chan
 
 	var wg sync.WaitGroup
 
-	for range config.ThreadsExtractListingLinks {
+	for range define.ThreadsExtractListingLinks {
 		wg.Go(func() {
 			extractListingLinksThr(searchPages, listingLinks)
 		})
@@ -37,13 +37,13 @@ func extractListingLinksThr(searchPages <-chan *goquery.Document, listingLinks c
 
 			href = _ListingLinkPrefix + href
 
-			if config.GotovZaNanasqne {
-				if slices.Contains(config.BlacklistNeGotoviZaNanasqne, href) {
+			if define.GotovZaNanasqne {
+				if slices.Contains(define.BlacklistNeGotoviZaNanasqne, href) {
 					return
 				}
 			}
 
-			if slices.Contains(config.LinkBlacklist, href) {
+			if slices.Contains(define.LinkBlacklist, href) {
 				return
 			}
 

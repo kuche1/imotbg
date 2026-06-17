@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/define"
 	"github.com/kuche1/imotbg/house"
 )
 
@@ -120,10 +120,10 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 
 	// title_lower := strings.ToLower(title)
 
-	if len(config.LocationPrefixWhitelist) > 0 {
+	if len(define.LocationPrefixWhitelist) > 0 {
 		found := false
 
-		for _, whitelisted := range config.LocationPrefixWhitelist {
+		for _, whitelisted := range define.LocationPrefixWhitelist {
 			// whitelisted_title_lower := strings.ToLower(whitelisted_title)
 			if strings.HasPrefix(location, whitelisted) {
 				found = true
@@ -136,7 +136,7 @@ func findLocation(elemInfo *goquery.Selection, link string) (value string, black
 		}
 	}
 
-	for _, blacklisted := range config.LocationPrefixBlacklist {
+	for _, blacklisted := range define.LocationPrefixBlacklist {
 		// blacklisted := strings.ToLower(blacklisted)
 		if strings.HasPrefix(location, blacklisted) {
 			return "", true
@@ -162,11 +162,11 @@ func findArea(elemParams *goquery.Selection, link string) (_value int64, _blackl
 		log.Fatalf("Area not a number for `%v`: %v", link, err)
 	}
 
-	if area < config.AreaMin {
+	if area < define.AreaMin {
 		return 0, true
 	}
 
-	if area > config.AreaMax {
+	if area > define.AreaMax {
 		return 0, true
 	}
 

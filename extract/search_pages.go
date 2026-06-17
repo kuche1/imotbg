@@ -7,7 +7,7 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/kuche1/gonet"
-	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/define"
 	"github.com/kuche1/imotbg/urll"
 )
 
@@ -16,10 +16,10 @@ func extractSearchPages(net *gonet.Net, results chan<- *goquery.Document) {
 
 	var wg sync.WaitGroup
 
-	priceMax := config.PriceMax
+	priceMax := define.PriceMax
 
-	for priceMax >= config.PriceMin {
-		priceMin := max(priceMax-config.PriceStep, config.PriceMin)
+	for priceMax >= define.PriceMin {
+		priceMin := max(priceMax-define.PriceStep, define.PriceMin)
 
 		// otherwise we are going to capture references ot the variables, and by the time
 		// the thread has started the values will have changed
@@ -44,7 +44,7 @@ func extractSearchPagesWithinPriceRange(
 ) {
 	var pageNum int
 
-	for pageNum = 1; pageNum <= config.LastPagePossible; pageNum++ {
+	for pageNum = 1; pageNum <= define.LastPagePossible; pageNum++ {
 		url := urll.Generate(pageNum, priceMin, priceMax)
 
 		rawRespBytes := net.Req(url)
@@ -62,7 +62,7 @@ func extractSearchPagesWithinPriceRange(
 		results <- doc
 	}
 
-	if pageNum >= config.LastPagePossible {
+	if pageNum >= define.LastPagePossible {
 		log.Fatal("The very last search page was reached, you need to reduce the price step")
 	}
 }

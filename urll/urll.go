@@ -3,7 +3,7 @@ package urll
 import (
 	"fmt"
 
-	"github.com/kuche1/imotbg/config"
+	"github.com/kuche1/imotbg/define"
 )
 
 // TODO: this is suspicious, add a print for the finished URL
@@ -13,7 +13,7 @@ func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 
 	///
 
-	if config.EdnostaenOk {
+	if define.EdnostaenOk {
 		url += "/ednostaen"
 	} else {
 		url += "/dvustaen"
@@ -21,7 +21,7 @@ func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 
 	///
 
-	if config.Garaj {
+	if define.Garaj {
 		url += "/s-garazh"
 	}
 
@@ -33,7 +33,7 @@ func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 
 	url += "?type_home="
 
-	if config.EdnostaenOk {
+	if define.EdnostaenOk {
 		// y 1-СТАЕН
 		url += "2~"
 	}
@@ -52,7 +52,7 @@ func Generate(pageNum int, priceMinEur int, priceMaxEur int) string {
 
 	///
 
-	if config.GotovZaNanasqne {
+	if define.GotovZaNanasqne {
 		// y Завършени - Имоти въведени в експлоатация
 		// n В строеж или имоти НЕ въведени в експлоатация
 		url += "&ybuild_type=1~"

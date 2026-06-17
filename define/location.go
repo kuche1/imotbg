@@ -1,4 +1,4 @@
-package config
+package define
 
 // active only if contains at lest 1 item
 var LocationPrefixWhitelist = []string{

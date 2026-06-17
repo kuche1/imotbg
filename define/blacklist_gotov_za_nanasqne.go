@@ -1,4 +1,4 @@
-package config
+package define
 
 var BlacklistNeGotoviZaNanasqne = []string{
 	////// postroen no bez nishto vutre
