@@ -41,7 +41,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			continue
 		}
 
-		location, stai, invalid := findLocation(elemInfo, pageData.link)
+		location, stai, invalid := findLocation(conf, elemInfo, pageData.link)
 		if invalid {
 			continue
 		}
@@ -101,7 +101,7 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invali
 	return price, false
 }
 
-func findLocation(elemInfo *goquery.Selection, link string) (_location string, _stai string, _blacklisted bool) {
+func findLocation(conf *config.Config, elemInfo *goquery.Selection, link string) (_location string, _stai string, _blacklisted bool) {
 	elemTitle := elemInfo.Find("div.obTitle").First()
 
 	location := strings.TrimSpace(elemTitle.Text())
@@ -157,6 +157,14 @@ func findLocation(elemInfo *goquery.Selection, link string) (_location string, _
 	}
 
 	stai = stai[len(pref):]
+
+	allowed, found := conf.StaiOkMap[stai]
+	if !found {
+		log.Fatalf("Number of rooms `%v` not found in room map `%v` - %v", stai, conf.StaiOkMap, link)
+	}
+	if !allowed {
+		return "", "", true
+	}
 
 	/////
 

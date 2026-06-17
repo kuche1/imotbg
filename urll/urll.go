@@ -9,15 +9,7 @@ import (
 // TODO: this is suspicious, add a print for the finished URL
 
 func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int) string {
-	url := "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya"
-
-	///
-
-	if conf.EdnostaenOk {
-		url += "/ednostaen"
-	} else {
-		url += "/dvustaen"
-	}
+	url := "https://www.imot.bg/obiavi/prodazhbi/grad-sofiya/ednostaen"
 
 	///
 
@@ -31,22 +23,14 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 
 	///
 
-	url += "?type_home="
-
-	if conf.EdnostaenOk {
-		// y 1-СТАЕН
-		url += "2~"
-	}
-
+	// y 1-СТАЕН
 	// y 2-СТАЕН
 	// y 3-СТАЕН
 	// y 4-СТАЕН
 	// y МНОГОСТАЕН
 	// y МЕЗОНЕТ
 	// n АТЕЛИЕ, ТАВАН
-	url += "3~4~5~6~"
-	// TODO: moje bi vmesto da si igraq s URL-a, prosto
-	// da parse-vam dali e 1-staen, 2-staen i tn
+	url += "?type_home=2~3~4~5~6~"
 
 	///
 
