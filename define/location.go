@@ -39,6 +39,7 @@ var LocationPrefixBlacklist = []string{
 	"град София, Драгалевци",
 	"град София, Симеоново",
 	"град София, Витоша",
+	"град София, Княжево",
 
 	//// na sever ot centura
 	"град София, Свобода",
@@ -55,6 +56,10 @@ var LocationPrefixBlacklist = []string{
 	"град София, Красна поляна 1", // + do fakulteta e
 	"град София, Красна поляна 2", // + do fakulteta e
 	"град София, Хладилника",
+	"град София, Гоце Делчев", // eto tuk e tozi brutalniq 106 kvadrata
+	"град София, Хаджи Димитър",
+	"град София, Бъкстон",    // moje s X10 no toi e na 30min (ponqkoga pove4e)
+	"град София, Разсадника", // 30min v metroto - ne e TOLKOVA zle actually
 
 	//// shit lokaciq (daleche tn)
 	"град София, Горубляне",         // izglejda s ultra shit infrastruktura

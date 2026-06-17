@@ -20,7 +20,7 @@ func NewConfig() *Config {
 		EdnostaenOk:                 true,
 
 		PriceMinEur: 90_000,
-		PriceMaxEur: 170_000,
+		PriceMaxEur: 180_000,
 
 		PloshtMinM2: 0,
 		PloshtMaxM2: math.MaxInt64,

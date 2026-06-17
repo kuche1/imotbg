@@ -35,4 +35,11 @@ var BlacklistNeGotoviZaNanasqne = []string{
 	"https://www.imot.bg/obiava-1b178031557159246-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1c176010069009881-prodava-tristaen-apartament-grad-sofiya-reduta",
 	"https://www.imot.bg/obiava-1c177209382847170-prodava-tristaen-apartament-grad-sofiya-reduta",
+	"https://www.imot.bg/obiava-1c178150511961424-prodava-tristaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1c176967308434951-prodava-tristaen-apartament-grad-sofiya-zona-b-18",
+	"https://www.imot.bg/obiava-1b177372943928118-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1f171222813415265-prodava-mezonet-grad-sofiya-benkovski",
+	"https://www.imot.bg/obiava-1c178031462175597-prodava-tristaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b178047038324036-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b178047037940315-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 }

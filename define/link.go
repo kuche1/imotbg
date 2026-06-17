@@ -25,6 +25,7 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b177694961544093-prodava-dvustaen-apartament-grad-sofiya-hadzhi-dimitar",
 	"https://www.imot.bg/obiava-1b177202603689393-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",
 	"https://www.imot.bg/obiava-1b176822292603670-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1c175863241469847-prodava-tristaen-apartament-grad-sofiya-malinova-dolina",
 
 	//// super s4upen - beyond remont
 
