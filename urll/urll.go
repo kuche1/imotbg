@@ -29,8 +29,8 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 	// y 4-СТАЕН
 	// y МНОГОСТАЕН
 	// y МЕЗОНЕТ
-	// n АТЕЛИЕ, ТАВАН
-	url += "?type_home=2~3~4~5~6~"
+	// y АТЕЛИЕ, ТАВАН
+	url += "?type_home=2~3~4~5~6~8~"
 
 	///
 

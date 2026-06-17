@@ -27,9 +27,13 @@ func NewConfig() *Config {
 		PloshtMaxM2: math.MaxInt64,
 
 		StaiOkMap: map[string]bool{
-			"1-СТАЕН": true,
-			"2-СТАЕН": true,
-			"3-СТАЕН": true,
+			"1-СТАЕН":       true,
+			"2-СТАЕН":       true,
+			"3-СТАЕН":       true,
+			"4-СТАЕН":       true,
+			"МНОГОСТАЕН":    true,
+			"МЕЗОНЕТ":       true,
+			"АТЕЛИЕ, ТАВАН": true,
 		},
 	}
 }
