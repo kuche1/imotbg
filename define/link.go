@@ -48,5 +48,6 @@ var LinkBlacklist = []string{
 
 	//// other
 
-	"https://www.imot.bg/obiava-1b177133940645532-prodava-dvustaen-apartament-grad-sofiya-lagera-ul-gebedzhe", // parter + za remont + skupo
+	"https://www.imot.bg/obiava-1b177133940645532-prodava-dvustaen-apartament-grad-sofiya-lagera-ul-gebedzhe",           // parter + za remont + skupo
+	"https://www.imot.bg/obiava-1c177445513751836-prodava-tristaen-apartament-grad-sofiya-zona-b-5-ul-balgarska-morava", // mnogo remont e nujen + skupo
 }
