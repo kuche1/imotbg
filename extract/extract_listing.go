@@ -223,10 +223,14 @@ func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string)
 
 	anyFound := false
 
-	for _, ekstraRequired := range conf.PoneEdnaZaduljitelnaEkstra {
-		if slices.Contains(ekstriAvailable, ekstraRequired) {
-			anyFound = true
-			break
+	if len(conf.PoneEdnaZaduljitelnaEkstra) == 0 {
+		anyFound = true
+	} else {
+		for _, ekstraRequired := range conf.PoneEdnaZaduljitelnaEkstra {
+			if slices.Contains(ekstriAvailable, ekstraRequired) {
+				anyFound = true
+				break
+			}
 		}
 	}
 

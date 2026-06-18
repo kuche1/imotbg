@@ -27,6 +27,14 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b176822292603670-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1c175863241469847-prodava-tristaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1a178024265416818-prodava-ednostaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1c175690376433321-prodava-tristaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1c174283201269896-prodava-tristaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b177827173409954-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177503973911026-prodava-dvustaen-apartament-grad-sofiya-darvenitsa",
+	"https://www.imot.bg/obiava-1c178161640520559-prodava-tristaen-apartament-grad-sofiya-mladost-1",
+	"https://www.imot.bg/obiava-1b178161660391529-prodava-dvustaen-apartament-grad-sofiya-mladost-1",
+	"https://www.imot.bg/obiava-1c177695169858697-prodava-tristaen-apartament-grad-sofiya-darvenitsa",
+	"https://www.imot.bg/obiava-1b178162320231084-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 
 	//// super s4upen - beyond remont
 
@@ -51,4 +59,7 @@ var LinkBlacklist = []string{
 
 	"https://www.imot.bg/obiava-1b177133940645532-prodava-dvustaen-apartament-grad-sofiya-lagera-ul-gebedzhe",           // parter + za remont + skupo
 	"https://www.imot.bg/obiava-1c177445513751836-prodava-tristaen-apartament-grad-sofiya-zona-b-5-ul-balgarska-morava", // mnogo remont e nujen + skupo
+	"https://www.imot.bg/obiava-1a175102045019074-prodava-ednostaen-apartament-grad-sofiya-darvenitsa",                  // shit maluk ofis
+	"https://www.imot.bg/obiava-1c176606413922771-prodava-tristaen-apartament-grad-sofiya-tsentar",                      // sgrada 1930
+	"https://www.imot.bg/obiava-1b175584789136274-prodava-dvustaen-apartament-grad-sofiya-tsentar",                      // za remont + skupa
 }

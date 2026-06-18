@@ -1,12 +1,14 @@
 // Findings:
 // https://www.imot.bg/obiava-1c175369817671057-prodava-tristaen-apartament-grad-sofiya-gotse-delchev
-// https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-sofiya-mladost-2#&gid=1&pid=2
-// https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-sofiya-mladost-1
+// https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-sofiya-mladost-2 // no e "za remont"
+// https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-sofiya-mladost-1 // posleden etaj, ne izglejda golqmo (no ush e 78)
+// https://www.imot.bg/obiava-1b177910658938310-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-akad-ivan-evst-geshov // s banq no bez nishto drugo napraveno
 
 package main
 
 import (
 	"fmt"
+	"math"
 	"slices"
 
 	"github.com/kuche1/imotbg/config"
@@ -27,7 +29,12 @@ func main() {
 		houses,
 		func(houseA *house.House, houseB *house.House) int {
 			formula := func(house *house.House) float64 {
-				return float64(house.AreaM2)
+				coeffPrice := 1.0 / float64(house.PriceEur)
+				coeffArea := math.Pow(float64(house.AreaM2), 1.0)
+				return coeffPrice * coeffArea
+
+				// return float64(house.AreaM2)
+
 				//coeffArea := math.Pow(float64(house.AreaM2) / 64.0, 1.2) // float64(house.AreaM2)
 				//coeffPrice := 1 / math.Pow(float64(house.PriceEur) / 150_000.0, 1.1)
 				//return coeffArea * coeffPrice
@@ -45,6 +52,8 @@ func main() {
 			return 1
 		},
 	)
+
+	// houses = houses[:len(houses)-9]
 
 	for _, house := range houses {
 		repr := house.Sprintf()

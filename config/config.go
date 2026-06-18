@@ -19,7 +19,7 @@ func NewConfig() *Config {
 		PriceMinEur: 0,
 		PriceMaxEur: 190_000,
 
-		PloshtMinM2: 0,
+		PloshtMinM2: 45,
 		PloshtMaxM2: math.MaxInt64,
 
 		StaiOkMap: map[string]bool{
@@ -34,7 +34,7 @@ func NewConfig() *Config {
 
 		// sekciq "Особености"
 		PoneEdnaZaduljitelnaEkstra: []string{
-			"С гараж", "С паркинг",
+			// "С гараж", "С паркинг",
 		},
 	}
 }
