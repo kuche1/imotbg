@@ -1,12 +1,13 @@
 
 Rezultati za raionite okolo chervenata metro liniq do 200_000 eur
 
-# 121-inf
+# 127
 
 https://www.imot.bg/obiava-1c178173192728591-prodava-tristaen-apartament-grad-sofiya-mladost-1
-2 etaja
-127m2
-"za remont"
+391 164.04 лв
++ 2 etaja
+- "za remont"
++ mejdu metro mladost i musagenica (no tova mai e preovilicheno, po screenshotite mojesh da vidish kude se namira)
 
 # 120
 
@@ -16,63 +17,83 @@ https://www.imot.bg/obiava-1b177486739127875-prodava-dvustaen-apartament-grad-so
 https://www.imot.bg/obiava-1b177520287535734-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 sushtite kato gorniq
 
-# 110-119
+# 100
 
 https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-sofiya-mladost-2
-1vi etaj
-samo 1 snimka
-"za remont"
+371 410.16 лв
+- 1vi etaj
+- samo 1 snimka
+- "za remont"
++ mladost 2
 
 # 84
 
 https://www.imot.bg/obiava-1c177858303958310-prodava-tristaen-apartament-grad-sofiya-mladost-2-bul-aleksandar-malinov
-4/8 et
-banqta ne e vibe
-ne vijdam kuhnq
-nqma snimka na kenefa
+391 166.00 лв
++ 4/8 et
+- banqta ne e vibe
++ vsi4ko drugo e vibe
+- v kuhnqta nqma cheshma
+- nqma snimka na kenefa
 
 https://www.imot.bg/obiava-1c177547533880236-prodava-tristaen-apartament-grad-sofiya-mladost-2
-babeshko
-7/8 et
+391 166.00 лв
+- babeshko
++ 7/8 et
++ mladost 2
 
 https://www.imot.bg/obiava-1c177382515417305-prodava-tristaen-apartament-grad-sofiya-mladost-4
-za remont
+391 166.00 лв
+- za remont
 
 # 81
 
 https://www.imot.bg/obiava-1c177220663761056-prodava-tristaen-apartament-grad-sofiya-dianabad
-nqma kuhnq
+387 252.38 лв
+- kuhnqta e fucked, no I guess moje terasata vremenno da se napravi na kuhnq (no pak nqmash mivka)
 
 https://www.imot.bg/obiava-1b177910658938310-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-akad-ivan-evst-geshov
-ima banq
-nqma nishto drugo AMA NQMA I POD DAJE
+355 961.06 лв
++ ima banq
+- nqma nishto drugo
++ centur
++ "Към имота се предлага подземно паркомясто с площ 15.30 кв.м. на цена от 30 000 евро"
 
 # 80
 
 https://www.imot.bg/obiava-1d175735790439098-prodava-chetiristaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1c177990407114664-prodava-tristaen-apartament-grad-sofiya-mladost-1
-4staen
-7/8 et
-kuhnqta e outdated
+391 166.00 лв
++ 4staen
++ 7/8 et
+- kuhnqta e outdated
++ mladost 1
+++ 2 toaletni
+- babeshko (vij klipa)
+- realno tova e apartamenta na Damqn no s lujata 4e e 4staen
 
 https://www.imot.bg/obiava-1c176483887652608-prodava-tristaen-apartament-grad-sofiya-mladost-3
+381 386.85 лв
 8/8 et
 
 https://www.imot.bg/obiava-1c177220235493451-prodava-tristaen-apartament-grad-sofiya-tsentar
-centura
-s parking
-izglejda dobre ot vutre, no e gredored, i imam chuvstvoto che otvun sgradata sigurno se razpada
+375 323.78 лв
++ centura
++ s parking
+- izglejda dobre ot vutre, no e gredored, i imam chuvstvoto che otvun sgradata sigurno se razpada
 
 # 78
 
 https://www.imot.bg/obiava-1c178160184514494-prodava-tristaen-apartament-grad-sofiya-tsentar
-centur
-babeshko
+-- do banishora
++ tuhla
+- babeshko
 
 https://www.imot.bg/obiava-1c177098208502152-prodava-tristaen-apartament-grad-sofiya-mladost-1
-et 8/8
-babeshko
-outdated kuhnq
+375 519.36 лв
+- et 8/8
+- babeshko
+- outdated kuhnq
 
 https://www.imot.bg/obiava-1c178117411413950-prodava-tristaen-apartament-grad-sofiya-dianabad
 "jilishteto e za osnoven remont" vupreki che ne izglejda tolkova zle
