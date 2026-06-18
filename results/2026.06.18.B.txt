@@ -1,21 +1,18 @@
 
 Rezultati za raionite okolo chervenata metro liniq do 200_000 eur
 
-# 127
+# 127 / 120
 
 https://www.imot.bg/obiava-1c178173192728591-prodava-tristaen-apartament-grad-sofiya-mladost-1
-391 164.04 лв
-+ 2 etaja
-- "za remont"
-+ mejdu metro mladost i musagenica (no tova mai e preovilicheno, po screenshotite mojesh da vidish kude se namira)
-
-# 120
-
 https://www.imot.bg/obiava-1f120550031106037-prodava-mezonet-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b176770321213473-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b177486739127875-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b177520287535734-prodava-dvustaen-apartament-grad-sofiya-mladost-1
-sushtite kato gorniq
+391 164.04 лв
++ 2 etaja
+++ golqmo
+- "za remont"
++ mejdu metro mladost i musagenica (no tova mai e preovilicheno, po screenshotite mojesh da vidish kude se namira)
 
 # 100
 
@@ -25,6 +22,7 @@ https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-so
 - samo 1 snimka
 - "za remont"
 + mladost 2
++ tuhla
 
 # 84
 
@@ -35,6 +33,8 @@ https://www.imot.bg/obiava-1c177858303958310-prodava-tristaen-apartament-grad-so
 + vsi4ko drugo e vibe
 - v kuhnqta nqma cheshma
 - nqma snimka na kenefa
+- panel
++ mladost 2
 
 https://www.imot.bg/obiava-1c177547533880236-prodava-tristaen-apartament-grad-sofiya-mladost-2
 391 166.00 лв
@@ -85,6 +85,7 @@ https://www.imot.bg/obiava-1c177220235493451-prodava-tristaen-apartament-grad-so
 # 78
 
 https://www.imot.bg/obiava-1c178160184514494-prodava-tristaen-apartament-grad-sofiya-tsentar
+389 210.17 лв
 -- do banishora
 + tuhla
 - babeshko
@@ -96,38 +97,56 @@ https://www.imot.bg/obiava-1c177098208502152-prodava-tristaen-apartament-grad-so
 - outdated kuhnq
 
 https://www.imot.bg/obiava-1c178117411413950-prodava-tristaen-apartament-grad-sofiya-dianabad
+387 254.34 лв
 "jilishteto e za osnoven remont" vupreki che ne izglejda tolkova zle
 
 https://www.imot.bg/obiava-1c178126857794891-prodava-tristaen-apartament-grad-sofiya-dianabad
-2 toaletni
-et 4/8
-ne e super moderno (ne ne e i super outdated)
+389 210.17 лв
+- Панел
+++ 2 toaletni
++ et 4/8
+- ne e super moderno (ne ne e i super outdated)
++ vana
++ "СВОБОДНО МЯСТО ЗА ПАРКИРАНЕ ! МЕТРОСТАНЦИЯ"
+- "Продавам тристаен апартамент за основен ремонт"
+= ne e prekaleno blizo do metroto, no s koleloto shte mi e ok
+- ne vijdam kazan na 1ta toaletna
 
 https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-sofiya-mladost-1
-et 20/20
+318 800.29 лв
+- et 20/20
+= ЕПК
+- ne e prekaleno blizo do metroto, no I guess s koleloto shte stane rabotata
++ evtono-ish (no e posleden etaj)
++ 2 asansiora
 
 # 77
 
 https://www.imot.bg/obiava-1c176008710752028-prodava-tristaen-apartament-grad-sofiya-mladost-1-ul-dimitar-mollov
+371 607.70 лв
 et 3/8
 
 https://www.imot.bg/obiava-1c178064688815433-prodava-tristaen-apartament-grad-sofiya-dianabad
+389 014.59 лв
 et 4/8
 poda na nqkoi mesta e grozen
 
 https://www.imot.bg/obiava-1c177918944248410-prodava-tristaen-apartament-grad-sofiya-dianabad
+389 210.17 лв
 et 4/8
 poda izglejda zle
 nqkoi tapeti izglejdadt zle
 nqma snimki na banqta koeto me kara da si mislq che e giga shit
 
 https://www.imot.bg/obiava-1c178116661721216-prodava-tristaen-apartament-grad-sofiya-dianabad
+389 210.17 лв
 et 4/7
 kuhnqta i banqta sa zle (no izpolzvaemi)
 
 # 76
 
 https://www.imot.bg/obiava-1c177675869550666-prodava-tristaen-apartament-grad-sofiya-dianabad
+342 270.25 лв
 et 1
 tapetite sa zle
 kuhnqta e zle
@@ -135,12 +154,19 @@ kuhnqta e zle
 # 75
 
 https://www.imot.bg/obiava-1b176339404525972-prodava-dvustaen-apartament-grad-sofiya-mladost-3
-et 7/7
+391 166.00 лв
++ stylish
+- nz v kuhnqta dali shte namerq mqsto za sudomiqlna ako nqma
+- et 7/7
++ tuhla
 
 https://www.imot.bg/obiava-1b178101066474345-prodava-dvustaen-apartament-grad-sofiya-mladost-3
-kuhnqta e outdated
-et 2
-2staen
+385 298.51 лв
+= EPK
+- kuhnqta e outdated
++ et 2
+- 2staen
++ ne izglejda zle
 
 https://www.imot.bg/obiava-1c178101159888314-prodava-tristaen-apartament-grad-sofiya-mladost-3
 mnogo e podobno na gornoto
