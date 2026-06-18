@@ -4,18 +4,17 @@ import "math"
 
 type Config struct {
 	ZaduljitelnoGotovZaNanasqne bool
-	ZaduljitelnoGaraj           bool
 	PriceMinEur                 int
 	PriceMaxEur                 int
 	PloshtMinM2                 int64
 	PloshtMaxM2                 int64
 	StaiOkMap                   map[string]bool
+	ZaduljitelniEkstri          []string
 }
 
 func NewConfig() *Config {
 	return &Config{
 		ZaduljitelnoGotovZaNanasqne: true,
-		ZaduljitelnoGaraj:           false,
 
 		PriceMinEur: 0,
 		PriceMaxEur: 190_000,
@@ -31,6 +30,11 @@ func NewConfig() *Config {
 			"МНОГОСТАЕН":    true,
 			"МЕЗОНЕТ":       true,
 			"АТЕЛИЕ, ТАВАН": false,
+		},
+
+		// sekciq "Особености"
+		ZaduljitelniEkstri: []string{
+			"С гараж", "С паркинг",
 		},
 	}
 }

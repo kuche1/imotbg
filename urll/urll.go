@@ -13,12 +13,6 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 
 	///
 
-	if conf.ZaduljitelnoGaraj {
-		url += "/s-garazh"
-	}
-
-	///
-
 	url += fmt.Sprintf("/p-%v", pageNum)
 
 	///

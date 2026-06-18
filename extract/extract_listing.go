@@ -2,6 +2,7 @@ package extract
 
 import (
 	"log"
+	"slices"
 	"strconv"
 	"strings"
 
@@ -61,7 +62,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			log.Fatalf("Could not find ekstri: %v", pageData.link)
 		}
 
-		ekstri, invalid := findEkstri(elemEkstri, pageData.link)
+		ekstri, invalid := findEkstri(conf, elemEkstri, pageData.link)
 		if invalid {
 			continue
 		}
@@ -209,16 +210,22 @@ func findArea(conf *config.Config, elemParams *goquery.Selection, link string) (
 	return area, false
 }
 
-func findEkstri(elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
+func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
 	elem := elemEkstri.Find("div.items").First()
 	if elem.Length() == 0 {
 		log.Fatalf("Could not find ekstri: %v", link)
 	}
 
-	rawStr := elem.Text()
-	rawStr = strings.TrimSpace(rawStr)
+	raw := elem.Text()
+	raw = strings.TrimSpace(raw)
 
-	slice := strings.Split(rawStr, "\n")
+	ekstriAvailable := strings.Split(raw, "\n")
 
-	return slice, false
+	for _, ekstraRequired := range conf.ZaduljitelniEkstri {
+		if !slices.Contains(ekstriAvailable, ekstraRequired) {
+			return nil, true
+		}
+	}
+
+	return ekstriAvailable, false
 }

@@ -34,6 +34,9 @@ func NewHouse(
 }
 
 func (self *House) Sprintf() string {
+	ekstri := fmt.Sprintf("%q", self.Ekstri)
+	ekstri = ekstri[1 : len(ekstri)-1]
+
 	return fmt.Sprintf(
 		`House:
     link    : %v
@@ -41,13 +44,13 @@ func (self *House) Sprintf() string {
     location: %v
     area    : %v m2
     rooms   : %v
-    ekstri  : %q
+    ekstri  : %v
 `,
 		self.Link,
 		humanize.Commaf(self.PriceEur),
 		self.Location,
 		self.AreaM2,
 		self.Stai,
-		self.Ekstri,
+		ekstri,
 	)
 }
