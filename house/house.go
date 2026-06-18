@@ -12,6 +12,7 @@ type House struct {
 	Location string
 	AreaM2   int64
 	Stai     string
+	Ekstri   []string
 }
 
 func NewHouse(
@@ -20,6 +21,7 @@ func NewHouse(
 	location string,
 	areaM2 int64,
 	stai string,
+	ekstri []string,
 ) *House {
 	return &House{
 		Link:     link,
@@ -27,6 +29,7 @@ func NewHouse(
 		Location: location,
 		AreaM2:   areaM2,
 		Stai:     stai,
+		Ekstri:   ekstri,
 	}
 }
 
@@ -34,15 +37,17 @@ func (self *House) Sprintf() string {
 	return fmt.Sprintf(
 		`House:
     link    : %v
-    price   : %v [EUR]
+    price   : %v eur
     location: %v
-    area    : %v [m2]
+    area    : %v m2
     rooms   : %v
+    ekstri  : %q
 `,
 		self.Link,
 		humanize.Commaf(self.PriceEur),
 		self.Location,
 		self.AreaM2,
 		self.Stai,
+		self.Ekstri,
 	)
 }

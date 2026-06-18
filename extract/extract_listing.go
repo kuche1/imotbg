@@ -56,12 +56,23 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			continue
 		}
 
+		elemEkstri := pageData.doc.Find("div.carExtri").First()
+		if elemEkstri.Length() == 0 {
+			log.Fatalf("Could not find ekstri: %v", pageData.link)
+		}
+
+		ekstri, invalid := findEkstri(elemEkstri, pageData.link)
+		if invalid {
+			continue
+		}
+
 		houses <- house.NewHouse(
 			pageData.link,
 			price,
 			location,
 			area,
 			stai,
+			ekstri,
 		)
 	}
 }
@@ -196,4 +207,18 @@ func findArea(conf *config.Config, elemParams *goquery.Selection, link string) (
 	}
 
 	return area, false
+}
+
+func findEkstri(elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
+	elem := elemEkstri.Find("div.items").First()
+	if elem.Length() == 0 {
+		log.Fatalf("Could not find ekstri: %v", link)
+	}
+
+	rawStr := elem.Text()
+	rawStr = strings.TrimSpace(rawStr)
+
+	slice := strings.Split(rawStr, "\n")
+
+	return slice, false
 }
