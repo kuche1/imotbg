@@ -9,7 +9,7 @@ type Config struct {
 	PloshtMinM2                 int64
 	PloshtMaxM2                 int64
 	StaiOkMap                   map[string]bool
-	ZaduljitelniEkstri          []string
+	PoneEdnaZaduljitelnaEkstra  []string
 }
 
 func NewConfig() *Config {
@@ -33,7 +33,7 @@ func NewConfig() *Config {
 		},
 
 		// sekciq "Особености"
-		ZaduljitelniEkstri: []string{
+		PoneEdnaZaduljitelnaEkstra: []string{
 			"С гараж", "С паркинг",
 		},
 	}
