@@ -1,6 +1,3 @@
-// Favoriti:
-// https://www.imot.bg/obiava-1c175369817671057-prodava-tristaen-apartament-grad-sofiya-gotse-delchev
-
 package config
 
 import "math"

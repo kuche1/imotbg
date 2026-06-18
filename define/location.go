@@ -2,7 +2,7 @@ package define
 
 // active only if contains at lest 1 item
 var LocationPrefixWhitelist = []string{
-	// //// следват метроро червената линия от центъра (без него) до края
+	// //// следват метроро червената линия от центъра до края
 	// "град София, Младост 4",
 	// "град София, Малинова долина",
 	// "град София, Младост 2",
@@ -15,6 +15,7 @@ var LocationPrefixWhitelist = []string{
 	// "град София, Мусагеница",
 	// "град София, Изгрев",
 	// "град София, Лозенец",
+	// "град София, Център",
 }
 
 var LocationPrefixBlacklist = []string{
