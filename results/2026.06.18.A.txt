@@ -1,0 +1,55 @@
+// TODO:
+// vuzmojno e tezi finding-i da sa fucked zashtoto za 1vata lista i nachaloto na 2rata lissta ne izpolzvah
+// stable sort I VIDQH PRED OCHITE MI KAK SE MENKAT 2 APARTAMENTA
+// TODO:
+// i sega kato se zamislq nqma golqma prichina da vqrvam che shte e stable i sled tozi fix, zashtoto parser-a
+// moje da mi gi dade v kakuvto i da e order
+
+// Findings [0 to 190_000 eur] [po liniqta na chervenoto metro (osven 1 izkluchenie)]:
+// https://www.imot.bg/obiava-1c175369817671057-prodava-tristaen-apartament-grad-sofiya-gotse-delchev
+// https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-sofiya-mladost-2 // no e "za remont"
+// https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-sofiya-mladost-1 // posleden etaj, ne izglejda golqmo (no ush e 78)
+// https://www.imot.bg/obiava-1b177910658938310-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-akad-ivan-evst-geshov // s banq no bez nishto drugo napraveno
+// https://www.imot.bg/obiava-1c176008710752028-prodava-tristaen-apartament-grad-sofiya-mladost-1-ul-dimitar-mollov // ne e super vibe
+// https://www.imot.bg/obiava-1b177947416187918-prodava-dvustaen-apartament-grad-sofiya-darvenitsa // posleden etaj
+// https://www.imot.bg/obiava-1b177368888732286-prodava-dvustaen-apartament-grad-sofiya-tsentar // tochno do metroto, no nqkolko spirki po-daleche ot rabota
+// https://www.imot.bg/obiava-1b177322978195468-prodava-dvustaen-apartament-grad-sofiya-mladost-1a // 64 kvadrata
+// https://www.imot.bg/obiava-1b177607649947692-prodava-dvustaen-apartament-grad-sofiya-mladost-2 // "imota e za remont"
+// https://www.imot.bg/obiava-1c175190107369399-prodava-tristaen-apartament-grad-sofiya-mladost-2 // nqmashe li go sushtiq po-nagore?
+// https://www.imot.bg/obiava-1b178145120607551-prodava-dvustaen-apartament-grad-sofiya-dianabad-bul-d-r-g-m-dimitrov // sus
+// https://www.imot.bg/obiava-1b178100537856199-prodava-dvustaen-apartament-grad-sofiya-mladost-2
+// https://www.imot.bg/obiava-1b178169637727021-prodava-dvustaen-apartament-grad-sofiya-tsentar-ul-kozloduy // maluk e no e v centura
+// https://www.imot.bg/obiava-1b178100545023866-prodava-dvustaen-apartament-grad-sofiya-mladost-3
+// https://www.imot.bg/obiava-1b177375867790455-prodava-dvustaen-apartament-grad-sofiya-mladost-4-ul-biznes-park-sofiya // vibe-ovete ne sa super
+// https://www.imot.bg/obiava-1b177030241091593-prodava-dvustaen-apartament-grad-sofiya-mladost-3 // malko maluk
+// https://www.imot.bg/obiava-1b177704095788357-prodava-dvustaen-apartament-grad-sofiya-mladost-1a-ul-ana-ahmatova // parter TUHLA
+// https://www.imot.bg/obiava-1c177832432865769-prodava-tristaen-apartament-grad-sofiya-mladost-1 // ne e super vibe
+// https://www.imot.bg/obiava-1c176339850107046-prodava-tristaen-apartament-grad-sofiya-mladost-3 // 1vi etaj
+// https://www.imot.bg/obiava-1b177565480649547-prodava-dvustaen-apartament-grad-sofiya-mladost-4 // niche, moje i da stane, markirano za remont
+// https://www.imot.bg/obiava-1b177703713290531-prodava-dvustaen-apartament-grad-sofiya-mladost-1a-ul-ana-ahmatova // parter
+// https://www.imot.bg/obiava-1b177790681532603-prodava-dvustaen-apartament-grad-sofiya-mladost-1 // etaj 1
+// https://www.imot.bg/obiava-1c177313611629139-prodava-tristaen-apartament-grad-sofiya-mladost-4 // 3staen, tuhla, 2et, 65m2
+// https://www.imot.bg/obiava-1b178150906913436-prodava-dvustaen-apartament-grad-sofiya-mladost-1a // et2, tuhla
+// https://www.imot.bg/obiava-1b177565119644405-prodava-dvustaen-apartament-grad-sofiya-mladost-4 // tuhla, ne e super vibe
+// https://www.imot.bg/obiava-1b178152788984794-prodava-dvustaen-apartament-grad-sofiya-mladost-3 // 65m2, panel
+// https://www.imot.bg/obiava-1b178167483264380-prodava-dvustaen-apartament-grad-sofiya-musagenitsa // 2st, 60m2
+// https://www.imot.bg/obiava-1a177392378235124-prodava-ednostaen-apartament-grad-sofiya-tsentar-ul-dunav // posleden etaj, 1st, 60m2, centur
+// https://www.imot.bg/obiava-1b177987155580824-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-stefan-stambolov // maluk
+// https://www.imot.bg/obiava-1b178170293872308-prodava-dvustaen-apartament-grad-sofiya-tsentar // centur, tuhla, 2st, maluk?
+// https://www.imot.bg/obiava-1b177151985009146-prodava-dvustaen-apartament-grad-sofiya-tsentar // obsht parking pred bloka
+// https://www.imot.bg/obiava-1b177555873147297-prodava-dvustaen-apartament-grad-sofiya-darvenitsa // maluk, luje za parkinga?
+// https://www.imot.bg/obiava-1b178047360298522-prodava-dvustaen-apartament-grad-sofiya-mladost-4 // parking AKO si doplatish
+// https://www.imot.bg/obiava-1b177876060372556-prodava-dvustaen-apartament-grad-sofiya-mladost-4 // parking AKO si doplatish
+
+// Findings [190_001 to 200_000 eur] [po liniqta na chervenoto metro]:
+// https://www.imot.bg/obiava-1c178173192728591-prodava-tristaen-apartament-grad-sofiya-mladost-1
+// https://www.imot.bg/obiava-1f120550031106037-prodava-mezonet-grad-sofiya-mladost-1
+// https://www.imot.bg/obiava-1b177520287535734-prodava-dvustaen-apartament-grad-sofiya-mladost-1 // same
+// https://www.imot.bg/obiava-1c177858303958310-prodava-tristaen-apartament-grad-sofiya-mladost-2-bul-aleksandar-malinov // toaletnata e shit
+// https://www.imot.bg/obiava-1c176483887652608-prodava-tristaen-apartament-grad-sofiya-mladost-3 // posleden etaj
+// https://www.imot.bg/obiava-1d175735790439098-prodava-chetiristaen-apartament-grad-sofiya-mladost-1 // 4staen
+// https://www.imot.bg/obiava-1c177990407114664-prodava-tristaen-apartament-grad-sofiya-mladost-1 // same
+// https://www.imot.bg/obiava-1c178160184514494-prodava-tristaen-apartament-grad-sofiya-tsentar // 3staen, centur, 1960
+
+// FUCCUCUCUCUCKCKKKCKCKCKCKKCKC ima SUPREEERRRERERERE MNOGOGOGOGOOGOGOGOG propusnati apartamenti zaradi shit sortiraneto
+///////////////////////////////

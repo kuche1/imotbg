@@ -35,6 +35,26 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1b178161660391529-prodava-dvustaen-apartament-grad-sofiya-mladost-1",
 	"https://www.imot.bg/obiava-1c177695169858697-prodava-tristaen-apartament-grad-sofiya-darvenitsa",
 	"https://www.imot.bg/obiava-1b178162320231084-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b178177888353772-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1c178115972493269-prodava-tristaen-apartament-grad-sofiya-mladost-2-bul-aleksandar-malinov",
+	"https://www.imot.bg/obiava-1b178167916369657-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b176607060409547-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177496071740416-prodava-dvustaen-apartament-grad-sofiya-mladost-2-ul-prof-al-t-balan",
+	"https://www.imot.bg/obiava-1b177738332239823-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b178108861678595-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b178036688626509-prodava-dvustaen-apartament-grad-sofiya-mladost-4",
+	"https://www.imot.bg/obiava-1b178109918894719-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1a176064961179584-prodava-ednostaen-apartament-grad-sofiya-mladost-4",
+	"https://www.imot.bg/obiava-1b178113960263042-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177573572338341-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1c175456261691767-prodava-tristaen-apartament-grad-sofiya-mladost-2",
+	"https://www.imot.bg/obiava-1b177850314690105-prodava-dvustaen-apartament-grad-sofiya-mladost-4",
+	"https://www.imot.bg/obiava-1b178161197951776-prodava-dvustaen-apartament-grad-sofiya-mladost-4",
+	"https://www.imot.bg/obiava-1b177918367283913-prodava-dvustaen-apartament-grad-sofiya-mladost-4",
+	"https://www.imot.bg/obiava-1b178110066379361-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177943082158836-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b178109920386584-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b178109881637278-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 
 	//// super s4upen - beyond remont
 
@@ -49,6 +69,7 @@ var LinkBlacklist = []string{
 
 	"https://www.imot.bg/obiava-1c177978613173915-prodava-tristaen-apartament-grad-sofiya-druzhba-2",
 	"https://www.imot.bg/obiava-1c166434162354666-prodava-tristaen-apartament-grad-sofiya-7-mi-11-ti-kilometar",
+	"https://www.imot.bg/obiava-1c178161343137262-prodava-tristaen-apartament-grad-sofiya-tsentar",
 
 	//// ako iska nqkoi moje da mi razbie prozoreca i da vleze ez
 
@@ -62,4 +83,5 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1a175102045019074-prodava-ednostaen-apartament-grad-sofiya-darvenitsa",                  // shit maluk ofis
 	"https://www.imot.bg/obiava-1c176606413922771-prodava-tristaen-apartament-grad-sofiya-tsentar",                      // sgrada 1930
 	"https://www.imot.bg/obiava-1b175584789136274-prodava-dvustaen-apartament-grad-sofiya-tsentar",                      // za remont + skupa
+	"https://www.imot.bg/obiava-1b177866689067743-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-hristo-botev",     // sgrada 1930
 }

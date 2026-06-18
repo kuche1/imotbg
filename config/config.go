@@ -1,7 +1,5 @@
 package config
 
-import "math"
-
 type Config struct {
 	ZaduljitelnoGotovZaNanasqne bool
 	PriceMinEur                 int
@@ -17,10 +15,10 @@ func NewConfig() *Config {
 		ZaduljitelnoGotovZaNanasqne: true,
 
 		PriceMinEur: 0,
-		PriceMaxEur: 190_000,
+		PriceMaxEur: 200_000,
 
-		PloshtMinM2: 45,
-		PloshtMaxM2: math.MaxInt64,
+		PloshtMinM2: 65,
+		PloshtMaxM2: 65, // math.MaxInt64
 
 		StaiOkMap: map[string]bool{
 			"1-СТАЕН":       true,
