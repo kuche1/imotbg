@@ -9,6 +9,8 @@ var LinkBlacklist = []string{
 
 	////// nqma/loshi/cgi snimki
 
+	"https://www.imot.bg/obiava-1b178108984018346-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177755290443551-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1b177754380218825-prodava-dvustaen-apartament-grad-sofiya-suhata-reka",
 	"https://www.imot.bg/obiava-1b178031461376813-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
 	"https://www.imot.bg/obiava-1b177970053215072-prodava-dvustaen-apartament-grad-sofiya-darvenitsa-bul-andrey-lyapchev",
@@ -64,12 +66,14 @@ var LinkBlacklist = []string{
 	"https://www.imot.bg/obiava-1c175465099419565-prodava-tristaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1d177020934881050-prodava-chetiristaen-apartament-grad-sofiya-oborishte",
 	"https://www.imot.bg/obiava-1b178160674433445-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-slivnitsa",
+	"https://www.imot.bg/obiava-1b177976238096526-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 
 	//// lokaciqta e luja
 
 	"https://www.imot.bg/obiava-1c177978613173915-prodava-tristaen-apartament-grad-sofiya-druzhba-2",
 	"https://www.imot.bg/obiava-1c166434162354666-prodava-tristaen-apartament-grad-sofiya-7-mi-11-ti-kilometar",
 	"https://www.imot.bg/obiava-1c178161343137262-prodava-tristaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b176311092259062-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 
 	//// ako iska nqkoi moje da mi razbie prozoreca i da vleze ez
 

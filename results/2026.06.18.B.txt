@@ -1,13 +1,14 @@
 
 Rezultati za raionite okolo chervenata metro liniq do 200_000 eur
 
-# 127 / 120
+# 127 / 120 / 73
 
 https://www.imot.bg/obiava-1c178173192728591-prodava-tristaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1f120550031106037-prodava-mezonet-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b176770321213473-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b177486739127875-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b177520287535734-prodava-dvustaen-apartament-grad-sofiya-mladost-1
+https://www.imot.bg/obiava-1b176587798612290-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 391 164.04 лв
 + 2 etaja
 ++ golqmo
@@ -19,7 +20,7 @@ https://www.imot.bg/obiava-1b177520287535734-prodava-dvustaen-apartament-grad-so
 https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-sofiya-mladost-2
 371 410.16 лв
 - 1vi etaj
-- samo 1 snimka
+-- samo 1 snimka
 - "za remont"
 + mladost 2
 + tuhla
@@ -28,6 +29,7 @@ https://www.imot.bg/obiava-1c178152298876317-prodava-tristaen-apartament-grad-so
 
 https://www.imot.bg/obiava-1c177858303958310-prodava-tristaen-apartament-grad-sofiya-mladost-2-bul-aleksandar-malinov
 391 166.00 лв
+- panel 1970
 + 4/8 et
 - banqta ne e vibe
 + vsi4ko drugo e vibe
@@ -38,25 +40,28 @@ https://www.imot.bg/obiava-1c177858303958310-prodava-tristaen-apartament-grad-so
 
 https://www.imot.bg/obiava-1c177547533880236-prodava-tristaen-apartament-grad-sofiya-mladost-2
 391 166.00 лв
+- panel 1970
 - babeshko
 + 7/8 et
 + mladost 2
 
 https://www.imot.bg/obiava-1c177382515417305-prodava-tristaen-apartament-grad-sofiya-mladost-4
 391 166.00 лв
+- panel 1980
 - za remont
 
 # 81
 
 https://www.imot.bg/obiava-1c177220663761056-prodava-tristaen-apartament-grad-sofiya-dianabad
 387 252.38 лв
+- panel 1991
 - kuhnqta e fucked, no I guess moje terasata vremenno da se napravi na kuhnq (no pak nqmash mivka)
 
 https://www.imot.bg/obiava-1b177910658938310-prodava-dvustaen-apartament-grad-sofiya-tsentar-bul-akad-ivan-evst-geshov
 355 961.06 лв
 + ima banq
 - nqma nishto drugo
-+ centur
+- lokaciqta luje che e centura
 + "Към имота се предлага подземно паркомясто с площ 15.30 кв.м. на цена от 30 000 евро"
 
 # 80
@@ -71,16 +76,18 @@ https://www.imot.bg/obiava-1c177990407114664-prodava-tristaen-apartament-grad-so
 ++ 2 toaletni
 - babeshko (vij klipa)
 - realno tova e apartamenta na Damqn no s lujata 4e e 4staen
+- na videoto e grozen
 
 https://www.imot.bg/obiava-1c176483887652608-prodava-tristaen-apartament-grad-sofiya-mladost-3
 381 386.85 лв
-8/8 et
+- panel 1980
+- 8/8 et
 
 https://www.imot.bg/obiava-1c177220235493451-prodava-tristaen-apartament-grad-sofiya-tsentar
 375 323.78 лв
 + centura
 + s parking
-- izglejda dobre ot vutre, no e gredored, i imam chuvstvoto che otvun sgradata sigurno se razpada
+-- izglejda dobre ot vutre, no e gredored, i imam chuvstvoto che otvun sgradata sigurno se razpada
 
 # 78
 
@@ -167,10 +174,14 @@ https://www.imot.bg/obiava-1b178101066474345-prodava-dvustaen-apartament-grad-so
 + et 2
 - 2staen
 + ne izglejda zle
+- nqma data na proizvodstvo
 
 https://www.imot.bg/obiava-1c178101159888314-prodava-tristaen-apartament-grad-sofiya-mladost-3
+385 298.51 лв
 mnogo e podobno na gornoto
-3staen
++ et2
++ epk 1990
++ 3staen
 
 https://www.imot.bg/obiava-1b177986700065754-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
 poda i tapetite za zle
@@ -178,54 +189,78 @@ poda i tapetite za zle
 # 74
 
 https://www.imot.bg/obiava-1b177858683483294-prodava-dvustaen-apartament-grad-sofiya-tsentar
-izglejda mi super CGI no ako ne e super
+- izglejda mi super CGI (no ako ne e super)
 
 https://www.imot.bg/obiava-1b176328402954862-prodava-dvustaen-apartament-grad-sofiya-mladost-4
-babeshko
+- babeshko
 
 https://www.imot.bg/obiava-1b177684559157004-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
-babeshko
+- babeshko
 
 https://www.imot.bg/obiava-1b177965426412720-prodava-dvustaen-apartament-grad-sofiya-tsentar-ul-dimitar-petkov
-babeshko
-centur
+381 386.85 лв
++ tuhla 1970
+- babeshko
++ ne e tochno v centura, no moito metro e do nego
+- et 4/4
 
 https://www.imot.bg/obiava-1b177425523801314-prodava-dvustaen-apartament-grad-sofiya-lozenets-bul-dzheyms-bauchar
-et 3/7
-izglejda super
-2007 (koeto e sus)
-boilera e v banqta (koeto e retarded???)
+391 166.00 лв
++ et 3/5
++ tuhla 2007
++ izglejda super
+- 2007 (koeto e sus)
+- boilera e v banqta (koeto e retarded???)
++ 2 (malki) kuhni
++ 2 sudomiqlni (li sa tova?)
++ 2 toaletni
++ lokaciqta e actually mnogo dobra
+- "Сградата към момента е без издадено Разрешение за ползване"
+- 2staen
+= "Разпределен в 2 самостоятелни студия"
 
 # 73
 
-https://www.imot.bg/obiava-1b176587798612290-prodava-dvustaen-apartament-grad-sofiya-mladost-1
-tova veche go ima po-nagore, ne znam zashto tazi obqva q ima 10000 puti
-
 https://www.imot.bg/obiava-1b177947416187918-prodava-dvustaen-apartament-grad-sofiya-darvenitsa
-et 8/8
+352 029.84 лв
+- panel 1980
+- et 8/8
++ ne izglejda zle
 
 # 72
 
 https://www.imot.bg/obiava-1b172415400679235-prodava-dvustaen-apartament-grad-sofiya-tsentar
-ima vsi4ko OSVEN BANQQQ AAAAAAA SEEEXXXSEXXXXX
-Възможност за закупуване на гараж на допълнителна цена.
+385 298.51 лв
+= ima vsi4ko OSVEN BANQQQ AAAAAAA SEEEXXXSEXXXXX
++ "Възможност за закупуване на гараж на допълнителна цена"
++ tuhla 2025
++ et 6/18
++ ush e do kauflanda i metroto (toest bash bash v centura)
+= no tova che e bash v centura oznachava malko poveche putuvane v metroto NO moje bi 10min po-malko hodene pesha koeto e worth
 
 https://www.imot.bg/obiava-1b177460029372475-prodava-dvustaen-apartament-grad-sofiya-tsentar-ul-opalchenska
 mai toq e sushtiq kato otgore
 
 https://www.imot.bg/obiava-1b177853768211802-prodava-dvustaen-apartament-grad-sofiya-mladost-3-ul-filip-avramov
-2/20 et
-outdated kuhnq
+385 298.51 лв
++ epk 1980
++ 2/20 et
+- outdated kuhnq
 
 https://www.imot.bg/obiava-1b177368888732286-prodava-dvustaen-apartament-grad-sofiya-tsentar
-vsushtnost e 64кв.м. + 4кв.м. мазе + 4кв. тераси xd
-centur
+365 740.21 лв
+= tuhla 1960
+- 2staen
+= vsushtnost e 64кв.м. + 4кв.м. мазе + 4кв. тераси xd
+- ne bash centura, malko sled po chervenata metro liniq
 
 # 70
 
 https://www.imot.bg/obiava-1c177011211648004-prodava-tristaen-apartament-grad-sofiya-mladost-3
-poda e losh
-ne vidqh kuhnqta i banqta na snimkite
+385 298.51 лв
++ epk 1990
+- poda e losh
+- ne vidqh kuhnqta i banqta na snimkite
 
 https://www.imot.bg/obiava-1b178038955867660-prodava-dvustaen-apartament-grad-sofiya-mladost-1-bul-andrey-saharov
 v ednata staq durvoto v poda e pochnalo da gnie???
@@ -233,72 +268,90 @@ v ednata staq durvoto v poda e pochnalo da gnie???
 # 69
 
 https://www.imot.bg/obiava-1b177375867790455-prodava-dvustaen-apartament-grad-sofiya-mladost-4-ul-biznes-park-sofiya
-et 8/9
+371 412.12 лв
+= panel 1980
++ et 8/9
 
 # 68
 
 https://www.imot.bg/obiava-1c177989042368394-prodava-tristaen-apartament-grad-sofiya-mladost-3
 https://www.imot.bg/obiava-1c178068218440851-prodava-tristaen-apartament-grad-sofiya-mladost-3
-et 8/8
+381 386.85 лв
+= panel 1980
+- et 8/8
 
 https://www.imot.bg/obiava-1b177997402437939-prodava-dvustaen-apartament-grad-sofiya-mladost-1
-snimkite izglejdat hubavo
+390 970.42 лв
++ snimkite izglejdat hubavo
+- panel, nqma godina
 
 https://www.imot.bg/obiava-1b177796455494132-prodava-dvustaen-apartament-grad-sofiya-mladost-4
-babeshko-ish
-losh pod
+322 711.95 лв
+- babeshko-ish
+- losh pod
++ et 7/8
 
 https://www.imot.bg/obiava-1b178100537856199-prodava-dvustaen-apartament-grad-sofiya-mladost-2
-leko vibe
+357 916.89 лв
+= epk, bez godina
++ leko vibe
 
 https://www.imot.bg/obiava-1b177989041071888-prodava-dvustaen-apartament-grad-sofiya-mladost-3
-etaj 8/8
+- etaj 8/8
++ izglejda ok
 
 # 67
 
 https://www.imot.bg/obiava-1c176339850107046-prodava-tristaen-apartament-grad-sofiya-mladost-3
-somewhat vibe
-et 1/8
+= panel 1980
++ somewhat vibe
+- et 1/8
 
 # 66
 
 https://www.imot.bg/obiava-1b178100545023866-prodava-dvustaen-apartament-grad-sofiya-mladost-3
-vibe
-"имотът се намира само на около **50 метра от метростанция**"
-et 7/9
-2 klimatika vidqh na snimkite
-178 200 €
-nqma snimki na banqta
+348 528.91 лв
+- panel, bez godina
++ vibe
++ "имотът се намира само на около **50 метра от метростанция**"
++ et 7/9
++ 2 klimatika vidqh na snimkite
+- nqma snimki na banqta
 
 https://www.imot.bg/obiava-1b177607649947692-prodava-dvustaen-apartament-grad-sofiya-mladost-2
-et 2/8
+332 491.10 лв
+= panel, 1980
++ et 2/8
++ izglejda dobre
+- samo vhoda izglejda zle
+- shte trqbva da izmislq neshto za sudomiqlna
+= banqta izglejda ok kum leko zle
 
 # 65
-
-https://www.imot.bg/obiava-1b176311092259062-prodava-dvustaen-apartament-grad-sofiya-tsentar
-centur
-et 8/8
-pokriv
-
-https://www.imot.bg/obiava-1b178025748880147-prodava-dvustaen-apartament-grad-sofiya-tsentar
-et 4/6
-centur
 
 https://www.imot.bg/obiava-1c175190107369399-prodava-tristaen-apartament-grad-sofiya-mladost-2
 ет 2/8
 
 https://www.imot.bg/obiava-1c177340432742769-prodava-tristaen-apartament-grad-sofiya-mladost-4
-ет 2/8
-fine kum vibe
+https://www.imot.bg/obiava-1c177313611629139-prodava-tristaen-apartament-grad-sofiya-mladost-4
+365 740.21 лв
++ tuhla 2009
+- 2009 e sus
++ 3staen
++ ет 2/8 || et 2/6
++ fine kum vibe
+- izglejda crammed
++ do rabotata mi, lidl, fantastiko, bila (ako likaciqta koqto estimate-vam e pravilna)
 
 https://www.imot.bg/obiava-1c178030851987878-prodava-tristaen-apartament-grad-sofiya-mladost-3
-et 8/8
-babejko
+- et 8/8
+- babejko
 
 https://www.imot.bg/obiava-1c178115928632729-prodava-tristaen-apartament-grad-sofiya-mladost-4
-et 7/8
-toaletnata e unusable
-kuhnqta e unusable
+310 976.97 лв
++ et 7/8
+- toaletnata e unusable
+- kuhnqta e unusable
 
 https://www.imot.bg/obiava-1b177921186849892-prodava-dvustaen-apartament-grad-sofiya-mladost-4
 et 3/9
@@ -315,34 +368,35 @@ somewhat zle - pod i tapeti
 banqta sushto e zle no e fixable
 
 https://www.imot.bg/obiava-1b176824094324160-prodava-dvustaen-apartament-grad-sofiya-mladost-3
-et 14/15
-ne vibe
++ epk 1990
++ et 14/15
+- ne vibe
 
 https://www.imot.bg/obiava-1b178108060384084-prodava-dvustaen-apartament-grad-sofiya-mladost-4-ul-filip-avramov
 https://www.imot.bg/obiava-1b178107994625600-prodava-dvustaen-apartament-grad-sofiya-mladost-3-ul-filip-avramov
+https://www.imot.bg/obiava-1c178107962887947-prodava-tristaen-apartament-grad-sofiya-mladost-3-ul-filip-avramov
 misql che sushtoto go ima po-nagore
 unusable kenef
 
 https://www.imot.bg/obiava-1b178057470389066-prodava-dvustaen-apartament-grad-sofiya-dianabad
 kuhnqta trqbva da se opravi
 
-https://www.imot.bg/obiava-1c178107962887947-prodava-tristaen-apartament-grad-sofiya-mladost-3-ul-filip-avramov
-duplicate
-
-https://www.imot.bg/obiava-1c177313611629139-prodava-tristaen-apartament-grad-sofiya-mladost-4
-vibe-ish
-et 2/6
-duplicate?
-
 https://www.imot.bg/obiava-1b176338039213727-prodava-dvustaen-apartament-grad-sofiya-mladost-2
 babeshko
 et 2/8
 
 https://www.imot.bg/obiava-1b178145120607551-prodava-dvustaen-apartament-grad-sofiya-dianabad-bul-d-r-g-m-dimitrov
-izglejda dobre no tqsno?
+LOKACIQTA E LUJA
++ tuhla 2000
++ et 4/6
+- 2staen
+- izglejda dobre no tqsno?
 
 https://www.imot.bg/obiava-1b178125965637007-prodava-dvustaen-apartament-grad-sofiya-darvenitsa
-ima banq i spalnq, no mai nqma kuhnq
+391 166.00 лв
++ tuhla 2026
+- ima banq i spalnq, no mai nqma kuhnq
+- 2staen
 
 https://www.imot.bg/obiava-1b178092497235712-prodava-dvustaen-apartament-grad-sofiya-tsentar
 babeshko
@@ -356,17 +410,26 @@ vibe
 samo nqma snimki ot kuhnqta
 
 https://www.imot.bg/obiava-1b177503235882219-prodava-dvustaen-apartament-grad-sofiya-mladost-2-ul-sveti-kipriyan
-shte trqbva da se pipne
+352 029.84 лв
+- shte trqbva da se pipne
+- kuhnqta e zle
 
 https://www.imot.bg/obiava-1b178152788984794-prodava-dvustaen-apartament-grad-sofiya-mladost-3
 haresva mi, moje bi edinstveno ako e malka
 
 https://www.imot.bg/obiava-1b177848959537733-prodava-dvustaen-apartament-grad-sofiya-dianabad
-haresva mi
-na snimkite vidqh sudomiqlna
++ epk 1990
++ haresva mi
++ na snimkite vidqh sudomiqlna
++ et 8/20
+- 2staen
 
 https://www.imot.bg/obiava-1b177956418653961-prodava-dvustaen-apartament-grad-sofiya-dianabad
 babeshko
 
 https://www.imot.bg/obiava-1b177443945437778-prodava-dvustaen-apartament-grad-sofiya-darvenitsa
 ima razni neshta za opravqne
+
+# 64
+
+NEDOPULNENO

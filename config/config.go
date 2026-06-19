@@ -1,5 +1,7 @@
 package config
 
+import "math"
+
 type Config struct {
 	ZaduljitelnoGotovZaNanasqne bool
 	PriceMinEur                 int
@@ -17,8 +19,8 @@ func NewConfig() *Config {
 		PriceMinEur: 0,
 		PriceMaxEur: 200_000,
 
-		PloshtMinM2: 65,
-		PloshtMaxM2: 65, // math.MaxInt64
+		PloshtMinM2: 0,             //65,
+		PloshtMaxM2: math.MaxInt64, //65,
 
 		StaiOkMap: map[string]bool{
 			"1-СТАЕН":       true,
@@ -33,6 +35,7 @@ func NewConfig() *Config {
 		// sekciq "Особености"
 		PoneEdnaZaduljitelnaEkstra: []string{
 			// "С гараж", "С паркинг",
+			"Тухла", "ЕПК",
 		},
 	}
 }
