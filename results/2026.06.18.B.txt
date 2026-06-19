@@ -168,20 +168,22 @@ https://www.imot.bg/obiava-1b176339404525972-prodava-dvustaen-apartament-grad-so
 + tuhla
 
 https://www.imot.bg/obiava-1b178101066474345-prodava-dvustaen-apartament-grad-sofiya-mladost-3
-385 298.51 лв
-= EPK
-- kuhnqta e outdated
-+ et 2
-- 2staen
-+ ne izglejda zle
-- nqma data na proizvodstvo
-
 https://www.imot.bg/obiava-1c178101159888314-prodava-tristaen-apartament-grad-sofiya-mladost-3
+https://www.imot.bg/obiava-1b177853768211802-prodava-dvustaen-apartament-grad-sofiya-mladost-3-ul-filip-avramov
 385 298.51 лв
-mnogo e podobno na gornoto
-+ et2
-+ epk 1990
-+ 3staen
+= EPK 1990 || 1980
+= kvadratite 75 ili 72 sa ?
+- kuhnqta e outdated
++ et 2/20 || 2/12
++ 3staen (ako si ok s tova da smqtash mqlkata kuhnq koqto e chast ot vsekidnevnata kato staia)
++ ne izglejda zle
+- shte trqbva da izmislq neshto za sudomiqlnata
++ staite ne sa crammed
+
+385 298.51 лв
++ epk 1980
++ 2/20 et
+- outdated kuhnq
 
 https://www.imot.bg/obiava-1b177986700065754-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
 poda i tapetite za zle
@@ -231,21 +233,16 @@ https://www.imot.bg/obiava-1b177947416187918-prodava-dvustaen-apartament-grad-so
 
 https://www.imot.bg/obiava-1b172415400679235-prodava-dvustaen-apartament-grad-sofiya-tsentar
 385 298.51 лв
++ tuhla 2025
 = ima vsi4ko OSVEN BANQQQ AAAAAAA SEEEXXXSEXXXXX
 + "Възможност за закупуване на гараж на допълнителна цена"
-+ tuhla 2025
 + et 6/18
 + ush e do kauflanda i metroto (toest bash bash v centura)
 = no tova che e bash v centura oznachava malko poveche putuvane v metroto NO moje bi 10min po-malko hodene pesha koeto e worth
+- mai tova e gigashit sduhaniq layout
 
 https://www.imot.bg/obiava-1b177460029372475-prodava-dvustaen-apartament-grad-sofiya-tsentar-ul-opalchenska
 mai toq e sushtiq kato otgore
-
-https://www.imot.bg/obiava-1b177853768211802-prodava-dvustaen-apartament-grad-sofiya-mladost-3-ul-filip-avramov
-385 298.51 лв
-+ epk 1980
-+ 2/20 et
-- outdated kuhnq
 
 https://www.imot.bg/obiava-1b177368888732286-prodava-dvustaen-apartament-grad-sofiya-tsentar
 365 740.21 лв
@@ -253,6 +250,7 @@ https://www.imot.bg/obiava-1b177368888732286-prodava-dvustaen-apartament-grad-so
 - 2staen
 = vsushtnost e 64кв.м. + 4кв.м. мазе + 4кв. тераси xd
 - ne bash centura, malko sled po chervenata metro liniq
+= ima kak da stane, no vsekidnevnata trqbva da e i spalnq
 
 # 70
 
@@ -295,6 +293,7 @@ https://www.imot.bg/obiava-1b178100537856199-prodava-dvustaen-apartament-grad-so
 357 916.89 лв
 = epk, bez godina
 + leko vibe
+- 2staen
 
 https://www.imot.bg/obiava-1b177989041071888-prodava-dvustaen-apartament-grad-sofiya-mladost-3
 - etaj 8/8
@@ -338,9 +337,10 @@ https://www.imot.bg/obiava-1c177313611629139-prodava-tristaen-apartament-grad-so
 + tuhla 2009
 - 2009 e sus
 + 3staen
+- malka vsekidnevna
+- drugite 2 stai sushto izglejdat malki
 + ет 2/8 || et 2/6
 + fine kum vibe
-- izglejda crammed
 + do rabotata mi, lidl, fantastiko, bila (ako likaciqta koqto estimate-vam e pravilna)
 
 https://www.imot.bg/obiava-1c178030851987878-prodava-tristaen-apartament-grad-sofiya-mladost-3
@@ -397,6 +397,7 @@ https://www.imot.bg/obiava-1b178125965637007-prodava-dvustaen-apartament-grad-so
 + tuhla 2026
 - ima banq i spalnq, no mai nqma kuhnq
 - 2staen
+- vijda mi se maluk
 
 https://www.imot.bg/obiava-1b178092497235712-prodava-dvustaen-apartament-grad-sofiya-tsentar
 babeshko
@@ -423,6 +424,7 @@ https://www.imot.bg/obiava-1b177848959537733-prodava-dvustaen-apartament-grad-so
 + na snimkite vidqh sudomiqlna
 + et 8/20
 - 2staen
+- ne moga da precenq vsekidnevnata kolko e golqma, dali shte moje da se napravi na leglo
 
 https://www.imot.bg/obiava-1b177956418653961-prodava-dvustaen-apartament-grad-sofiya-dianabad
 babeshko
