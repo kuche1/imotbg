@@ -35,7 +35,7 @@ func NewConfig() *Config {
 		// sekciq "Особености"
 		PoneEdnaZaduljitelnaEkstra: []string{
 			// "С гараж", "С паркинг",
-			"Тухла", "ЕПК",
+			"Тухла", "ЕПК", "ПК",
 		},
 	}
 }
