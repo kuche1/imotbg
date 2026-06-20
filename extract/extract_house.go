@@ -52,7 +52,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			log.Fatalf("Could not find params: %v", pageData.link)
 		}
 
-		area, invalid := findArea(conf, elemParams, pageData.link)
+		additionalParams, area, invalid := findParams(conf, elemParams, pageData.link)
 		if invalid {
 			continue
 		}
@@ -74,6 +74,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			area,
 			stai,
 			ekstri,
+			additionalParams,
 		)
 	}
 }
@@ -183,31 +184,73 @@ func findLocation(conf *config.Config, elemInfo *goquery.Selection, link string)
 	return location, stai, false
 }
 
-func findArea(conf *config.Config, elemParams *goquery.Selection, link string) (_value int64, _blacklisted bool) {
-	elem := elemParams.Find("strong").First()
+func findParams(
+	conf *config.Config,
+	elemParams *goquery.Selection,
+	link string,
+) (
+	_additionalParams map[string]string,
+	_area int64,
+	_blacklisted bool,
+) {
+	divs := elemParams.Find("div")
+	if divs.Length() == 0 {
+		log.Fatalf("unexpected layout")
+	}
 
-	areaStr := elem.Text()
+	parametri := make(map[string]string, divs.Length())
+
+	divs.Each(func(i int, elem *goquery.Selection) {
+		// fmt.Printf("i = %v\n", i)
+		text := elem.Text()
+		// fmt.Printf("text=%v\n", text)
+
+		idx := strings.IndexByte(text, ':')
+		if idx < 0 {
+			log.Fatalf("Could not find separator in `%v` - %v", text, link)
+		}
+
+		key := text[:idx]
+		value := text[idx+1:]
+
+		// fmt.Printf("%v %v\n", key, value)
+
+		_, existed := parametri[key]
+		if existed {
+			log.Fatalf("Duplicate param `%v` - %v", key, link)
+		}
+
+		parametri[key] = value
+	})
+
+	areaStr := parametri["Площ"]
+	delete(parametri, "Площ")
+
+	// elem := elemParams.Find("strong").First()
+	// areaStr := elem.Text()
 
 	suffix := " m2"
 	if !strings.HasSuffix(areaStr, suffix) {
-		log.Fatalf("Unexpected area format `%v`: %v", areaStr, link)
+		log.Fatalf("Unexpected area format `%v` - %v", areaStr, link)
 	}
 	areaStr = strings.TrimSuffix(areaStr, suffix)
 
 	area, err := strconv.ParseInt(areaStr, 10, 64)
 	if err != nil {
-		log.Fatalf("Area not a number for `%v`: %v", link, err)
+		log.Fatalf("Area not a number for `%v` - %v", link, err)
 	}
 
+	// TODO: If we are to add more param checks, think if this `return` is going
+	// to screw us over
 	if area < conf.PloshtMinM2 {
-		return 0, true
+		return parametri, 0, true
 	}
 
 	if area > conf.PloshtMaxM2 {
-		return 0, true
+		return parametri, 0, true
 	}
 
-	return area, false
+	return parametri, area, false
 }
 
 func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
