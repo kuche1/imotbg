@@ -179,6 +179,7 @@ https://www.imot.bg/obiava-1b177853768211802-prodava-dvustaen-apartament-grad-so
 + ne izglejda zle
 - shte trqbva da izmislq neshto za sudomiqlnata
 + staite ne sa crammed
+= локация: https://www.google.com/maps/place/Obshtina+Mladost/@42.6401956,23.381608,3a,75y,249.86h,123.39t/data=!3m7!1e1!3m5!1sSFD1Glwt2U69LOrz52Lmjg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-33.394368583304654%26panoid%3DSFD1Glwt2U69LOrz52Lmjg%26yaw%3D249.85749581870724!7i16384!8i8192!4m9!1m2!2m1!1zMzA1INCw0LLRgtC-0LHRg9GB!3m5!1s0x40aa86c1c9bbe04b:0xc6abb9641c2e21f9!8m2!3d42.640231!4d23.381524!16s%2Fg%2F11fl47vx12?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D
 
 385 298.51 лв
 + epk 1980
