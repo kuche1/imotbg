@@ -52,7 +52,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			log.Fatalf("Could not find params: %v", pageData.link)
 		}
 
-		additionalParams, area, invalid := findParams(conf, elemParams, pageData.link)
+		additionalParams, area, stroitelstvo, invalid := findParams(conf, elemParams, pageData.link)
 		if invalid {
 			continue
 		}
@@ -73,6 +73,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			location,
 			area,
 			stai,
+			stroitelstvo,
 			ekstri,
 			additionalParams,
 		)
@@ -191,6 +192,7 @@ func findParams(
 ) (
 	_additionalParams map[string]string,
 	_area int64,
+	_stroitelstvo string,
 	_blacklisted bool,
 ) {
 	divs := elemParams.Find("div")
@@ -201,9 +203,7 @@ func findParams(
 	parametri := make(map[string]string, divs.Length())
 
 	divs.Each(func(i int, elem *goquery.Selection) {
-		// fmt.Printf("i = %v\n", i)
 		text := elem.Text()
-		// fmt.Printf("text=%v\n", text)
 
 		idx := strings.IndexByte(text, ':')
 		if idx < 0 {
@@ -213,8 +213,6 @@ func findParams(
 		key := text[:idx]
 		value := text[idx+1:]
 
-		// fmt.Printf("%v %v\n", key, value)
-
 		_, existed := parametri[key]
 		if existed {
 			log.Fatalf("Duplicate param `%v` - %v", key, link)
@@ -223,11 +221,10 @@ func findParams(
 		parametri[key] = value
 	})
 
+	///// area
+
 	areaStr := parametri["Площ"]
 	delete(parametri, "Площ")
-
-	// elem := elemParams.Find("strong").First()
-	// areaStr := elem.Text()
 
 	suffix := " m2"
 	if !strings.HasSuffix(areaStr, suffix) {
@@ -240,17 +237,30 @@ func findParams(
 		log.Fatalf("Area not a number for `%v` - %v", link, err)
 	}
 
-	// TODO: If we are to add more param checks, think if this `return` is going
-	// to screw us over
 	if area < conf.PloshtMinM2 {
-		return parametri, 0, true
+		return nil, 0, "", true
 	}
 
 	if area > conf.PloshtMaxM2 {
-		return parametri, 0, true
+		return nil, 0, "", true
 	}
 
-	return parametri, area, false
+	///// stroitelstvo
+
+	key := "Строителство"
+	stroitelstvo, ok := parametri[key]
+	delete(parametri, key)
+
+	if !ok {
+		if !conf.StroitelstvoMissingOk {
+			return nil, 0, "", true
+		}
+		stroitelstvo = "<no data>"
+	}
+
+	///// return
+
+	return parametri, area, stroitelstvo, false
 }
 
 func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {

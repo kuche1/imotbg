@@ -12,6 +12,7 @@ type House struct {
 	Location         string
 	AreaM2           int64
 	Stai             string
+	Stroitelstvo     string
 	Ekstri           []string
 	AdditionalParams map[string]string
 }
@@ -22,6 +23,7 @@ func NewHouse(
 	location string,
 	areaM2 int64,
 	stai string,
+	stroitelstvo string,
 	ekstri []string,
 	additionalParams map[string]string,
 ) *House {
@@ -31,6 +33,7 @@ func NewHouse(
 		Location:         location,
 		AreaM2:           areaM2,
 		Stai:             stai,
+		Stroitelstvo:     stroitelstvo,
 		Ekstri:           ekstri,
 		AdditionalParams: additionalParams,
 	}
@@ -50,6 +53,7 @@ func (self *House) Sprintf() string {
     location         : %v
     area             : %v m2
     rooms            : %v
+    stroitelstvo     : %v
     ekstri           : %v
     additional params: %v
 `,
@@ -58,6 +62,7 @@ func (self *House) Sprintf() string {
 		self.Location,
 		self.AreaM2,
 		self.Stai,
+		self.Stroitelstvo,
 		ekstri,
 		additionalParams,
 	)
