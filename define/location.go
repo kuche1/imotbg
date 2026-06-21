@@ -25,8 +25,15 @@ var LocationPrefixWhitelist = []string{
 	// //// drujba
 	// "град София, Дружба 1",
 
-	//// mladost 1
-	"град София, Младост 1",
+	// //// mladost 1
+	// "град София, Младост 1",
+
+	// //// iztok, izgrev
+	// "град София, Изток",
+	// "град София, Изгрев",
+
+	//// dianabad
+	"град София, Дианабад",
 }
 
 var LocationPrefixBlacklist = []string{
