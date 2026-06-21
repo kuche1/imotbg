@@ -9,6 +9,8 @@ var LinkBlacklist = []string{
 
 	////// nqma/loshi/cgi snimki
 
+	"https://www.imot.bg/obiava-1b177919154813241-prodava-dvustaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1b177755101013692-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1b175507944199592-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",
 	"https://www.imot.bg/obiava-1b175102120665633-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",
 	"https://www.imot.bg/obiava-1b171956412798080-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",

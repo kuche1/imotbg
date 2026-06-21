@@ -5,6 +5,7 @@ var BlacklistNeGotoviZaNanasqne = []string{
 	// NOTE: imashe edin nqkoi koito IMA GOTOVA banq (kato o4evidno ne e v tozi spisuk)
 	// taka 4e trqbva vsi4ki snimki da se gledat, a ne da se skipvat
 
+	"https://www.imot.bg/obiava-1a177874523581198-prodava-ednostaen-apartament-grad-sofiya-musagenitsa",
 	"https://www.imot.bg/obiava-1c177667638647614-prodava-tristaen-apartament-grad-sofiya-mladost-1-bul-andrey-saharov",
 	"https://www.imot.bg/obiava-1b177133967926126-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",
 	"https://www.imot.bg/obiava-1b178177953774480-prodava-dvustaen-apartament-grad-sofiya-druzhba-1",

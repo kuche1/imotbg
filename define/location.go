@@ -32,8 +32,14 @@ var LocationPrefixWhitelist = []string{
 	// "град София, Изток",
 	// "град София, Изгрев",
 
-	//// dianabad
-	"град София, Дианабад",
+	// //// dianabad
+	// "град София, Дианабад",
+
+	// //// centur
+	// "град София, Център",
+
+	//// musagenica
+	"град София, Мусагеница",
 }
 
 var LocationPrefixBlacklist = []string{
