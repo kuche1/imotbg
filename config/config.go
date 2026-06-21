@@ -1,5 +1,7 @@
 package config
 
+import "math"
+
 type Config struct {
 	ZaduljitelnoGotovZaNanasqne bool
 	PriceMinEur                 int
@@ -21,8 +23,8 @@ func NewConfig() *Config {
 		PriceMinEur: 0,
 		PriceMaxEur: 200_000,
 
-		PloshtMinM2: 83, //40,            //65,
-		PloshtMaxM2: 83, //math.MaxInt64, //65,
+		PloshtMinM2: 0,             //83, //40,            //65,
+		PloshtMaxM2: math.MaxInt64, //83, //math.MaxInt64, //65,
 
 		StroitelstvoMissingOk: true,
 
