@@ -47,8 +47,11 @@ var LocationPrefixWhitelist = []string{
 	// //// mladost 4
 	// "град София, Младост 4",
 
-	//// mladost 2
-	"град София, Младост 2",
+	// //// mladost 2
+	// "град София, Младост 2",
+
+	//// mladost 3
+	"град София, Младост 3",
 }
 
 var LocationPrefixBlacklist = []string{
