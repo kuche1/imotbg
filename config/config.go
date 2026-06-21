@@ -9,6 +9,8 @@ type Config struct {
 	PloshtMinM2                 int64
 	PloshtMaxM2                 int64
 	StroitelstvoMissingOk       bool
+	GodinaMissingOk             bool
+	GodinaMin                   int64
 	StaiOkMap                   map[string]bool
 	PoneEdnaZaduljitelnaEkstra  []string
 }
@@ -23,6 +25,11 @@ func NewConfig() *Config {
 		PloshtMinM2: 40,            //65,
 		PloshtMaxM2: math.MaxInt64, //65,
 
+		StroitelstvoMissingOk: true,
+
+		GodinaMissingOk: true,
+		GodinaMin:       1950,
+
 		StaiOkMap: map[string]bool{
 			"1-СТАЕН":       true,
 			"2-СТАЕН":       true,
@@ -32,8 +39,6 @@ func NewConfig() *Config {
 			"МЕЗОНЕТ":       true,
 			"АТЕЛИЕ, ТАВАН": false,
 		},
-
-		StroitelstvoMissingOk: true,
 
 		// sekciq "Особености"
 		PoneEdnaZaduljitelnaEkstra: []string{

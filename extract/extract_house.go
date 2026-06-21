@@ -52,7 +52,15 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			log.Fatalf("Could not find params: %v", pageData.link)
 		}
 
-		additionalParams, area, stroitelstvo, invalid := findParams(conf, elemParams, pageData.link)
+		additionalParams,
+			area,
+			stroitelstvo,
+			godina,
+			invalid := findParams(
+			conf,
+			elemParams,
+			pageData.link,
+		)
 		if invalid {
 			continue
 		}
@@ -74,6 +82,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 			area,
 			stai,
 			stroitelstvo,
+			godina,
 			ekstri,
 			additionalParams,
 		)
@@ -193,6 +202,7 @@ func findParams(
 	_additionalParams map[string]string,
 	_area int64,
 	_stroitelstvo string,
+	_godina int64,
 	_blacklisted bool,
 ) {
 	divs := elemParams.Find("div")
@@ -238,29 +248,86 @@ func findParams(
 	}
 
 	if area < conf.PloshtMinM2 {
-		return nil, 0, "", true
+		return nil, 0, "", 0, true
 	}
 
 	if area > conf.PloshtMaxM2 {
-		return nil, 0, "", true
+		return nil, 0, "", 0, true
 	}
 
-	///// stroitelstvo
+	///// stroitelstvo, godina
 
 	key := "Строителство"
 	stroitelstvo, ok := parametri[key]
 	delete(parametri, key)
 
-	if !ok {
+	godina := int64(0)
+
+	if ok {
+
+		tmp := ", Въведен в експлоатация "
+		idx := strings.Index(stroitelstvo, tmp)
+		if idx < 0 {
+			log.Fatalf("Site layout must have changed - %v", link)
+		}
+
+		godinaStr := stroitelstvo[idx+len(tmp):]
+		stroitelstvo = stroitelstvo[:idx]
+
+		if godinaStr == "" {
+			if !conf.GodinaMissingOk {
+				return nil, 0, "", 0, true
+			}
+		} else {
+			suffix := " г."
+			if !strings.HasSuffix(godinaStr, suffix) {
+				log.Fatalf("Expected suffix `%v` for `%v` - %v", suffix, godinaStr, link)
+			}
+			godinaStr = godinaStr[:len(godinaStr)-len(suffix)]
+
+			tmp := " - "
+			idx := strings.Index(godinaStr, tmp)
+			if idx < 0 {
+				val, err := strconv.ParseInt(godinaStr, 10, 64)
+				if err != nil {
+					log.Fatalf("Year is not an integer `%v` - %v", godinaStr, link)
+				}
+				godina = val
+			} else {
+				yearA := godinaStr[:idx]
+				yearB := godinaStr[idx+len(tmp):]
+
+				valA, err := strconv.ParseInt(yearA, 10, 64)
+				if err != nil {
+					log.Fatalf("Year is not an integer `%v` - %v", yearA, link)
+				}
+
+				valB, err := strconv.ParseInt(yearB, 10, 64)
+				if err != nil {
+					log.Fatalf("Year is not an integer `%v` - %v", yearB, link)
+				}
+
+				godina = (valA + valB) / 2
+			}
+		}
+
+	} else {
 		if !conf.StroitelstvoMissingOk {
-			return nil, 0, "", true
+			return nil, 0, "", 0, true
 		}
 		stroitelstvo = "<no data>"
 	}
 
+	if godina < conf.GodinaMin {
+		if (godina == 0) && (conf.GodinaMissingOk || conf.StroitelstvoMissingOk) {
+		} else {
+			return nil, 0, "", 0, true
+		}
+	}
+
 	///// return
 
-	return parametri, area, stroitelstvo, false
+	return parametri, area, stroitelstvo, godina, false
 }
 
 func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
