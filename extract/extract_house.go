@@ -319,7 +319,7 @@ func findParams(
 	}
 
 	if godina < conf.GodinaMin {
-		if (godina == 0) && (conf.GodinaMissingOk || conf.StroitelstvoMissingOk) {
+		if (godina == 0) && (conf.GodinaMissingOk) {
 		} else {
 			return nil, 0, "", 0, true
 		}
