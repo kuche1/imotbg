@@ -278,6 +278,10 @@ func findParams(
 			if !conf.GodinaMissingOk {
 				return nil, 0, "", 0, true
 			}
+		} else if godinaStr == "Преди 1920 г." {
+			if !conf.GodinaPredi1920Ok {
+				return nil, 0, "", 0, true
+			}
 		} else {
 			suffix := " г."
 			if !strings.HasSuffix(godinaStr, suffix) {

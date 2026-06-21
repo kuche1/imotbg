@@ -9,6 +9,15 @@ var LinkBlacklist = []string{
 
 	////// nqma/loshi/cgi snimki
 
+	"https://www.imot.bg/obiava-1c177081532031044-prodava-tristaen-apartament-grad-sofiya-slatina",
+	"https://www.imot.bg/obiava-1c177876700128907-prodava-tristaen-apartament-grad-sofiya-druzhba-2",
+	"https://www.imot.bg/obiava-1c177857543247995-prodava-tristaen-apartament-grad-sofiya-krasna-polyana-3",
+	"https://www.imot.bg/obiava-1b173191532042090-prodava-dvustaen-apartament-grad-sofiya-ovcha-kupel",
+	"https://www.imot.bg/obiava-1b176407570380339-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b177081366657101-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1c178047036755038-prodava-tristaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1d177263863417120-prodava-chetiristaen-apartament-grad-sofiya-suhata-reka-ul-549",
+	"https://www.imot.bg/obiava-1c178188076969752-prodava-tristaen-apartament-grad-sofiya-obelya",
 	"https://www.imot.bg/obiava-1b175338852456098-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1b178170630266962-prodava-dvustaen-apartament-grad-sofiya-tsentar",
 	"https://www.imot.bg/obiava-1b178109861689594-prodava-dvustaen-apartament-grad-sofiya-tsentar",

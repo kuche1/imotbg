@@ -5,6 +5,23 @@ var BlacklistNeGotoviZaNanasqne = []string{
 	// NOTE: imashe edin nqkoi koito IMA GOTOVA banq (kato o4evidno ne e v tozi spisuk)
 	// taka 4e trqbva vsi4ki snimki da se gledat, a ne da se skipvat
 
+	"https://www.imot.bg/obiava-1c178107824941660-prodava-tristaen-apartament-grad-sofiya-ovcha-kupel-2",
+	"https://www.imot.bg/obiava-1b174429810806910-prodava-dvustaen-apartament-grad-sofiya-ovcha-kupel-2",
+	"https://www.imot.bg/obiava-1f170927936479923-prodava-mezonet-grad-sofiya-ovcha-kupel",
+	"https://www.imot.bg/obiava-1c176253052877097-prodava-tristaen-apartament-grad-sofiya-vrazhdebna",
+	"https://www.imot.bg/obiava-1b177787572784767-prodava-dvustaen-apartament-grad-sofiya-malinova-dolina",
+	"https://www.imot.bg/obiava-1b176157166701244-prodava-dvustaen-apartament-grad-sofiya-ovcha-kupel-2-ul-srebarni-zvancheta",
+	"https://www.imot.bg/obiava-1c178116661772559-prodava-tristaen-apartament-grad-sofiya-krasna-polyana-2",
+	"https://www.imot.bg/obiava-1b168431228861098-prodava-dvustaen-apartament-grad-sofiya-ovcha-kupel",
+	"https://www.imot.bg/obiava-1c178187124102001-prodava-tristaen-apartament-grad-sofiya-tsentar",
+	"https://www.imot.bg/obiava-1c177652743512916-prodava-tristaen-apartament-grad-sofiya-ovcha-kupel-1",
+	"https://www.imot.bg/obiava-1b173762473388287-prodava-dvustaen-apartament-grad-sofiya-obelya-1",
+	"https://www.imot.bg/obiava-1c177926806415637-prodava-tristaen-apartament-grad-sofiya-ovcha-kupel",
+	"https://www.imot.bg/obiava-1c178059052355191-prodava-tristaen-apartament-grad-sofiya-ovcha-kupel-1",
+	"https://www.imot.bg/obiava-1b176805815471464-prodava-dvustaen-apartament-grad-sofiya-obelya-1",
+	"https://www.imot.bg/obiava-1a175863090602347-prodava-ednostaen-apartament-grad-sofiya-studentski-grad",
+	"https://www.imot.bg/obiava-1c173632881787536-prodava-tristaen-apartament-grad-sofiya-ovcha-kupel-1",
+	"https://www.imot.bg/obiava-1b177702771318757-prodava-dvustaen-apartament-grad-sofiya-vitosha",
 	"https://www.imot.bg/obiava-1b178125851056217-prodava-dvustaen-apartament-grad-sofiya-darvenitsa",
 	"https://www.imot.bg/obiava-1b178099399420679-prodava-dvustaen-apartament-grad-sofiya-darvenitsa",
 	"https://www.imot.bg/obiava-1b178025933450290-prodava-dvustaen-apartament-grad-sofiya-tsentar",
