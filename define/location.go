@@ -1,6 +1,9 @@
 package define
 
+// s kola, 8:30 AM
 // град София, Гоце Делчев // 16-28min do rabota
+// Овча купел 1 // 22-40min do rabota
+// Дружба 1 // 12-30min
 
 // active only if contains at lest 1 item
 var LocationPrefixWhitelist = []string{
