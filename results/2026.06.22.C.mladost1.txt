@@ -58,6 +58,12 @@ https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-so
 + [fav]
 = location https://www.google.com/maps/@42.6576664,23.3817628,3a,60y,128.4h,148.16t/data=!3m7!1e1!3m5!1szHPk1ElTTB4ERL-LMa95DA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-58.15805377658745%26panoid%3DzHPk1ElTTB4ERL-LMa95DA%26yaw%3D128.39610860084053!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D
 
+https://www.imot.bg/obiava-1c178212929202067-prodava-tristaen-apartament-grad-sofiya-mladost-1
+- panel bez godina
+- samo 1 snimka
++ 78 m2
+- izglejda zle
+
 https://www.imot.bg/obiava-1c176008710752028-prodava-tristaen-apartament-grad-sofiya-mladost-1-ul-dimitar-mollov
 371 607.70 лв
 - Панел, Въведен в експлоатация 1970 - 1979 г.
@@ -87,12 +93,43 @@ https://www.imot.bg/obiava-1b177997402437939-prodava-dvustaen-apartament-grad-so
 + snimkite izglejdat hubavo
 - 2staen
 
+https://www.imot.bg/obiava-1b176755343388402-prodava-dvustaen-apartament-grad-sofiya-mladost-1
+391 166.00 лв
+= 68m2
+- ne e bash zavurshen
+- 2staen
+
 https://www.imot.bg/obiava-1b177792204429569-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
 = 65 m2
 et 4/8
 somewhat zle - pod i tapeti
 banqta sushto e zle no e fixable
 nqkoi neshta sa moderni obache
+
+https://www.imot.bg/obiava-1a178169296923073-prodava-ednostaen-apartament-grad-sofiya-mladost-1
++ Тухла, Въведен в експлоатация 2018 г.
+= 65m2
++ krasivo
+- 2staen
+
+https://www.imot.bg/obiava-1c177098413483300-prodava-tristaen-apartament-grad-sofiya-mladost-1a
+= Панел, 1990 г.
+= 65m2
++ vana
++ krasiv e (samo snimkite da ne sa AI)
++ 3staen
+- mladost 1a
+- malko kvadrati
++ [fav] vupreki che ne znam dali e dostatuchno dobur
+
+https://www.imot.bg/obiava-1c177945174950637-prodava-tristaen-apartament-grad-sofiya-mladost-1
+- pane bez godina
+= 65m2
++ krasiv
++ 3staen
++ bash do metroto
++ et 2/8
+- trqbva da izmislq neshto za sudomiqlnata
 
 https://www.imot.bg/obiava-1b178150906913436-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
 = 64 m2

@@ -306,10 +306,12 @@ func findStroitelstvoGodina(
 		stroitelstvo = rawStroitelstvo[:idx]
 		vuvedeno := rawStroitelstvo[idx+len(t):]
 
-		// can `vuvedeno` be an empty string?
-		// I don't think it is possible
+		// TODO: tozi kod e malko spaghett
+		// trqbva year extraction-a da si e sobstvena funkciq
 
-		if vuvedeno == "Въведен в експлоатация " {
+		if (vuvedeno == "") || (vuvedeno == "Въведен в експлоатация ") || (vuvedeno == "Не е въведен в експлоатация ") {
+			// zachitam "Не е въведен в експлоатация" kato "missing godina" zashtoto
+			// sum vidql pone 1 obqva, koqto e greshno vuvedeno tova
 			if conf.GodinaMissingOk {
 				goto return_data
 			}
@@ -326,7 +328,22 @@ func findStroitelstvoGodina(
 		if strings.HasPrefix(vuvedeno, t) {
 			vuvedeno = vuvedeno[len(t):]
 		} else {
-			log.Fatalf("Unexpected prefix `%v` - %v", vuvedeno, link)
+			t = "Ще бъде въведен в експлоатация "
+			if strings.HasPrefix(vuvedeno, t) {
+				// narochno ne proverqvam configa dali sum setnal "gotov za nanasqne"
+				// v slu4ai 4e 1) nqkoi apartament e pochti gotov 2) nqkoi e missclick-nal
+				// i e napisal greshno info za apartamenta
+				vuvedeno = vuvedeno[len(t):]
+			} else {
+
+				val, err := strconv.ParseInt(vuvedeno, 10, 64)
+				if err == nil {
+					godina = val
+					goto return_data
+				}
+
+				log.Fatalf("Unexpected prefix `%v` - %v", vuvedeno, link)
+			}
 		}
 
 		if vuvedeno == "Преди 1920" {

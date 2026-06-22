@@ -3,28 +3,28 @@ package config
 import "math"
 
 type Config struct {
-	ZaduljitelnoGotovZaNanasqne bool
-	PriceMinEur                 int
-	PriceMaxEur                 int
-	PloshtMinM2                 int64
-	PloshtMaxM2                 int64
-	StroitelstvoMissingOk       bool
-	GodinaMissingOk             bool
-	GodinaPredi1920Ok           bool
-	GodinaMin                   int64
-	StaiOkMap                   map[string]bool
-	PoneEdnaZaduljitelnaEkstra  []string
+	GotovZaNanasqne            bool
+	PriceMinEur                int
+	PriceMaxEur                int
+	PloshtMinM2                int64
+	PloshtMaxM2                int64
+	StroitelstvoMissingOk      bool
+	GodinaMissingOk            bool
+	GodinaPredi1920Ok          bool
+	GodinaMin                  int64
+	StaiOkMap                  map[string]bool
+	PoneEdnaZaduljitelnaEkstra []string
 }
 
 func NewConfig() *Config {
 	return &Config{
-		ZaduljitelnoGotovZaNanasqne: true,
+		GotovZaNanasqne: true,
 
 		PriceMinEur: 0,
 		PriceMaxEur: 200_000,
 
-		PloshtMinM2: 0,             //83, //40,            //65,
-		PloshtMaxM2: math.MaxInt64, //83, //math.MaxInt64, //65,
+		PloshtMinM2: 40,            //83,             //65,
+		PloshtMaxM2: math.MaxInt64, //83,//65,
 
 		StroitelstvoMissingOk: true,
 

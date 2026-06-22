@@ -38,7 +38,7 @@ func extractListingLinksThr(conf *config.Config, searchPages <-chan *goquery.Doc
 
 			href = _ListingLinkPrefix + href
 
-			if conf.ZaduljitelnoGotovZaNanasqne {
+			if conf.GotovZaNanasqne {
 				if slices.Contains(define.BlacklistNeGotoviZaNanasqne, href) {
 					return
 				}

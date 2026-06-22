@@ -1,48 +1,4 @@
 House:
-    link             : https://www.imot.bg/obiava-1a177806590586908-prodava-ednostaen-apartament-grad-sofiya-mladost-1
-    price            : 80,000 eur
-    location         : град София, Младост 1
-    area             : 20 m2
-    rooms            : 1-СТАЕН
-    stroitelstvo     : ЕПК
-    godina           : 1984
-    ekstri           : "ЕПК" "Асансьор" "Саниран"
-    additional params: "Газ":"НЕ" "Етаж":"10-ти от 11" "ТEЦ":"ДА"
-
-House:
-    link             : https://www.imot.bg/obiava-1a177928738374341-prodava-ednostaen-apartament-grad-sofiya-mladost-1
-    price            : 80,000 eur
-    location         : град София, Младост 1
-    area             : 20 m2
-    rooms            : 1-СТАЕН
-    stroitelstvo     : ЕПК
-    godina           : 0
-    ekstri           : "ЕПК" "Асансьор"
-    additional params: "Газ":"НЕ" "Етаж":"10-ти от 11" "ТEЦ":"ДА"
-
-House:
-    link             : https://www.imot.bg/obiava-1a178204175925527-prodava-ednostaen-apartament-grad-sofiya-mladost-1
-    price            : 115,000 eur
-    location         : град София, Младост 1
-    area             : 34 m2
-    rooms            : 1-СТАЕН
-    stroitelstvo     : ЕПК
-    godina           : 1984
-    ekstri           : "ЕПК" "Асансьор" "Видео наблюдение" "Контрол на достъпа"
-    additional params: "Етаж":"8-ми от 14" "ТEЦ":"ДА"
-
-House:
-    link             : https://www.imot.bg/obiava-1a177702271743533-prodava-ednostaen-apartament-grad-sofiya-mladost-1
-    price            : 124,990 eur
-    location         : град София, Младост 1
-    area             : 36 m2
-    rooms            : 1-СТАЕН
-    stroitelstvo     : ЕПК
-    godina           : 1984
-    ekstri           : "ЕПК" "Асансьор" "Интернет връзка" "Контрол на достъпа"
-    additional params: "Етаж":"10-ти от 14" "ТEЦ":"ДА"
-
-House:
     link             : https://www.imot.bg/obiava-1a178211090667252-prodava-ednostaen-apartament-grad-sofiya-mladost-1a-ul-ana-ahmatova
     price            : 133,000 eur
     location         : град София, Младост 1А
@@ -186,6 +142,17 @@ House:
     additional params: "Етаж":"2-ри от 7"
 
 House:
+    link             : https://www.imot.bg/obiava-1a178169296923073-prodava-ednostaen-apartament-grad-sofiya-mladost-1
+    price            : 175,000 eur
+    location         : град София, Младост 1
+    area             : 65 m2
+    rooms            : 1-СТАЕН
+    stroitelstvo     : Тухла
+    godina           : 2018
+    ekstri           : "Тухла" "Асансьор" "С гараж" "Обзаведен" "Видео наблюдение" "Контрол на достъпа" "В затворен комплекс" "Възможност за дан. кредит"
+    additional params: "Етаж":"8-ми от 10" "ТEЦ":"ДА"
+
+House:
     link             : https://www.imot.bg/obiava-1b177792204429569-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
     price            : 169,500 eur
     location         : град София, Младост 1А
@@ -195,6 +162,39 @@ House:
     godina           : 1984
     ekstri           : "Панел" "Асансьор" "С паркинг" "Контрол на достъпа"
     additional params: "Етаж":"4-ти от 8" "ТEЦ":"ДА"
+
+House:
+    link             : https://www.imot.bg/obiava-1c177098413483300-prodava-tristaen-apartament-grad-sofiya-mladost-1a
+    price            : 195,000 eur
+    location         : град София, Младост 1А
+    area             : 65 m2
+    rooms            : 3-СТАЕН
+    stroitelstvo     : Панел
+    godina           : 1990
+    ekstri           : "Панел" "Обзаведен" "Асансьор" "Саниран"
+    additional params: "Газ":"НЕ" "Етаж":"7-ми от 8" "ТEЦ":"ДА"
+
+House:
+    link             : https://www.imot.bg/obiava-1c177945174950637-prodava-tristaen-apartament-grad-sofiya-mladost-1
+    price            : 193,460 eur
+    location         : град София, Младост 1
+    area             : 65 m2
+    rooms            : 3-СТАЕН
+    stroitelstvo     : Панел
+    godina           : 0
+    ekstri           : "Панел" "Обзаведен"
+    additional params: "Газ":"НЕ" "Етаж":"2-ри от 8" "ТEЦ":"ДА"
+
+House:
+    link             : https://www.imot.bg/obiava-1b176755343388402-prodava-dvustaen-apartament-grad-sofiya-mladost-1
+    price            : 200,000 eur
+    location         : град София, Младост 1
+    area             : 68 m2
+    rooms            : 2-СТАЕН
+    stroitelstvo     : Тухла
+    godina           : 2026
+    ekstri           : "Тухла" "С преход" "Асансьор"
+    additional params: "Газ":"НЕ" "Етаж":"Партер от 6" "ТEЦ":"НЕ"
 
 House:
     link             : https://www.imot.bg/obiava-1b177997402437939-prodava-dvustaen-apartament-grad-sofiya-mladost-1
@@ -283,6 +283,17 @@ House:
     godina           : 1996
     ekstri           : "ЕПК" "Обзаведен"
     additional params: "Етаж":"20-ти от 20" "ТEЦ":"ДА"
+
+House:
+    link             : https://www.imot.bg/obiava-1c178212929202067-prodava-tristaen-apartament-grad-sofiya-mladost-1
+    price            : 158,000 eur
+    location         : град София, Младост 1
+    area             : 78 m2
+    rooms            : 3-СТАЕН
+    stroitelstvo     : Панел
+    godina           : 0
+    ekstri           : "Панел" "Асансьор" "Ипотекиран"
+    additional params: "Етаж":"8-ми от 8"
 
 House:
     link             : https://www.imot.bg/obiava-1c177990407114664-prodava-tristaen-apartament-grad-sofiya-mladost-1
