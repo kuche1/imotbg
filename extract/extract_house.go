@@ -297,64 +297,78 @@ func findStroitelstvoGodina(
 	}
 
 	{
-
-		tmp := ", Въведен в експлоатация "
-		idx := strings.Index(rawStroitelstvo, tmp)
+		t := ", "
+		idx := strings.Index(rawStroitelstvo, t)
 		if idx < 0 {
 			log.Fatalf("Site layout must have changed - %v", link)
 		}
 
-		godinaStr := rawStroitelstvo[idx+len(tmp):]
 		stroitelstvo = rawStroitelstvo[:idx]
+		vuvedeno := rawStroitelstvo[idx+len(t):]
 
-		if godinaStr == "" {
-			if !conf.GodinaMissingOk {
-				goto skip_house
+		// can `vuvedeno` be an empty string?
+		// I don't think it is possible
+
+		if vuvedeno == "Въведен в експлоатация " {
+			if conf.GodinaMissingOk {
+				goto return_data
 			}
-		} else if godinaStr == "Преди 1920 г." {
-			if !conf.GodinaPredi1920Ok {
-				goto skip_house
-			}
+			goto skip_house
+		}
+
+		t = " г."
+		if !strings.HasSuffix(vuvedeno, t) {
+			log.Fatalf("Expected suffix `%v` for `%v` - %v", t, vuvedeno, link)
+		}
+		vuvedeno = vuvedeno[:len(vuvedeno)-len(t)]
+
+		t = "Въведен в експлоатация "
+		if strings.HasPrefix(vuvedeno, t) {
+			vuvedeno = vuvedeno[len(t):]
 		} else {
-			suffix := " г."
-			if !strings.HasSuffix(godinaStr, suffix) {
-				log.Fatalf("Expected suffix `%v` for `%v` - %v", suffix, godinaStr, link)
+			log.Fatalf("Unexpected prefix `%v` - %v", vuvedeno, link)
+		}
+
+		if vuvedeno == "Преди 1920" {
+			if conf.GodinaPredi1920Ok {
+				goto return_data
 			}
-			godinaStr = godinaStr[:len(godinaStr)-len(suffix)]
+			goto skip_house
+		}
 
-			tmp := " - "
-			idx := strings.Index(godinaStr, tmp)
-			if idx < 0 {
-				val, err := strconv.ParseInt(godinaStr, 10, 64)
-				if err != nil {
-					log.Fatalf("Year is not an integer `%v` - %v", godinaStr, link)
-				}
-				godina = val
-			} else {
-				yearA := godinaStr[:idx]
-				yearB := godinaStr[idx+len(tmp):]
+		t = " - "
+		idx = strings.Index(vuvedeno, t)
+		if idx < 0 {
 
-				valA, err := strconv.ParseInt(yearA, 10, 64)
-				if err != nil {
-					log.Fatalf("Year is not an integer `%v` - %v", yearA, link)
-				}
-
-				valB, err := strconv.ParseInt(yearB, 10, 64)
-				if err != nil {
-					log.Fatalf("Year is not an integer `%v` - %v", yearB, link)
-				}
-
-				godina = (valA + valB) / 2
+			val, err := strconv.ParseInt(vuvedeno, 10, 64)
+			if err != nil {
+				log.Fatalf("Year is not an integer `%v` - %v", vuvedeno, link)
 			}
+			godina = val
+
+		} else {
+
+			yearA := vuvedeno[:idx]
+			yearB := vuvedeno[idx+len(t):]
+
+			valA, err := strconv.ParseInt(yearA, 10, 64)
+			if err != nil {
+				log.Fatalf("Year is not an integer `%v` - %v", yearA, link)
+			}
+
+			valB, err := strconv.ParseInt(yearB, 10, 64)
+			if err != nil {
+				log.Fatalf("Year is not an integer `%v` - %v", yearB, link)
+			}
+
+			godina = (valA + valB) / 2
+
 		}
 
 	}
 
 	if godina < conf.GodinaMin {
-		if (godina == 0) && (conf.GodinaMissingOk) {
-		} else {
-			goto skip_house
-		}
+		goto skip_house
 	}
 
 return_data:
