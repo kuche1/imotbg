@@ -8,6 +8,7 @@ https://www.imot.bg/obiava-1b177486739127875-prodava-dvustaen-apartament-grad-so
 https://www.imot.bg/obiava-1b177520287535734-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b176587798612290-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 391 164.04 лв
+3 080.43 лв./m2 || 3 260.37 лв./m2 || 5 224.02 лв./m2
 + ЕПК, 1986
 + 127/120/73 m2
 + 2 etaja
@@ -24,6 +25,7 @@ https://www.imot.bg/obiava-1b176587798612290-prodava-dvustaen-apartament-grad-so
 https://www.imot.bg/obiava-1d175735790439098-prodava-chetiristaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1c177990407114664-prodava-tristaen-apartament-grad-sofiya-mladost-1
 391 166.00 лв
+4 889.58 лв./m2
 = Панел, Въведен в експлоатация 1980 - 1989 г.
 + 80 m2
 + 4staen
@@ -37,15 +39,18 @@ https://www.imot.bg/obiava-1c177990407114664-prodava-tristaen-apartament-grad-so
 
 https://www.imot.bg/obiava-1c177098208502152-prodava-tristaen-apartament-grad-sofiya-mladost-1
 375 519.36 лв
-= ЕПК, bez data
+4 815.25 лв./m2
+- Панел, Въведен в експлоатация 1970 - 1979 г.
 + 78 m2
 + 3staen
 - et 8/8
 - babeshko
 - outdated kuhnq
+- trqbva da se pipne
 
 https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-sofiya-mladost-1
 318 800.29 лв
+3 937.09 лв./m2
 + ЕПК, 1996
 + 78 m2
 - et 20/20
@@ -59,6 +64,7 @@ https://www.imot.bg/obiava-1c177712109058420-prodava-tristaen-apartament-grad-so
 = location https://www.google.com/maps/@42.6576664,23.3817628,3a,60y,128.4h,148.16t/data=!3m7!1e1!3m5!1szHPk1ElTTB4ERL-LMa95DA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-58.15805377658745%26panoid%3DzHPk1ElTTB4ERL-LMa95DA%26yaw%3D128.39610860084053!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D
 
 https://www.imot.bg/obiava-1c178212929202067-prodava-tristaen-apartament-grad-sofiya-mladost-1
+3 962.51 лв./m2
 - panel bez godina
 - samo 1 snimka
 + 78 m2
@@ -66,14 +72,17 @@ https://www.imot.bg/obiava-1c178212929202067-prodava-tristaen-apartament-grad-so
 
 https://www.imot.bg/obiava-1c176008710752028-prodava-tristaen-apartament-grad-sofiya-mladost-1-ul-dimitar-mollov
 371 607.70 лв
+4 826.99 лв./m2
 - Панел, Въведен в експлоатация 1970 - 1979 г.
 + 77 m2
 + et 3/8
 - babeshko
++ toaletnata e otdelno, moje bi ima kak da si sloja 2ra v banqta
 
 https://www.imot.bg/obiava-1b177986700065754-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
 + Панел, Въведен в експлоатация 1990 г.
 + 75 m2
+= mladost 1a
 - poda i tapetite za zle
 - banqta e zle
 
@@ -81,8 +90,10 @@ https://www.imot.bg/obiava-1b177684559157004-prodava-dvustaen-apartament-grad-so
 = Панел, Въведен в експлоатация 1980 - 1989 г.
 + 74 m2
 - babeshko
+- trqbva da se pipne
 
 https://www.imot.bg/obiava-1b178038955867660-prodava-dvustaen-apartament-grad-sofiya-mladost-1-bul-andrey-saharov
+= ЕПК, Въведен в експлоатация 1970 - 1979 г.
 + 70 m2
 v ednata staq durvoto v poda e pochnalo da gnie???
 
@@ -92,6 +103,9 @@ https://www.imot.bg/obiava-1b177997402437939-prodava-dvustaen-apartament-grad-so
 - panel, nqma godina
 + snimkite izglejdat hubavo
 - 2staen
++ vana
++ mai vidqh 2 toaletni?
++ [fav]
 
 https://www.imot.bg/obiava-1b176755343388402-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 391 166.00 лв
@@ -107,10 +121,15 @@ banqta sushto e zle no e fixable
 nqkoi neshta sa moderni obache
 
 https://www.imot.bg/obiava-1a178169296923073-prodava-ednostaen-apartament-grad-sofiya-mladost-1
+342 270.25 лв
+5 265.09 лв./m2
 + Тухла, Въведен в експлоатация 2018 г.
 = 65m2
 + krasivo
-- 2staen
+- 1staen
++ moooojebiiii ima kak da stane
++ ne prekaleno skup, ne prekaleno evtin
+- локацията е лъжа - намира се в полигона
 
 https://www.imot.bg/obiava-1c177098413483300-prodava-tristaen-apartament-grad-sofiya-mladost-1a
 = Панел, 1990 г.
@@ -120,38 +139,52 @@ https://www.imot.bg/obiava-1c177098413483300-prodava-tristaen-apartament-grad-so
 + 3staen
 - mladost 1a
 - malko kvadrati
+- spalnite sa malki
+= mladost 1a
 + [fav] vupreki che ne znam dali e dostatuchno dobur
 
 https://www.imot.bg/obiava-1c177945174950637-prodava-tristaen-apartament-grad-sofiya-mladost-1
-- pane bez godina
+- pane, 1980
 = 65m2
 + krasiv
 + 3staen
 + bash do metroto
 + et 2/8
 - trqbva da izmislq neshto za sudomiqlnata
++ [fav]
 
 https://www.imot.bg/obiava-1b178150906913436-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
+361 826.59 лв
 = 64 m2
-+ izglejda prilichno
++ krasivo
 - 2st - shte trqbva neshto da se pravi s vsekidnevnata (koqto e i kuhnq btw koeto e dosta shit)
+= moje bi ima kak da napravq neshhto s antreto?
++ [fav]
 
 https://www.imot.bg/obiava-1b177322978195468-prodava-dvustaen-apartament-grad-sofiya-mladost-1a
 318 800.29 лв
+= 64m2
 - panel bez godina
-- stava i guess no izglejda maluk
+= stava i guess no izglejda maluk
 - 2staen
 + evtin
++ ima kiler
++ [fav]
 
 https://www.imot.bg/obiava-1b177554750952291-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 381 778.02 лв
+= 61m2
 - panel bez godina
 + krasiv
-= moje bi ima kak da stane, kuhnqta e otdelno
+= moje bi ima kak da stane, no ne moga da precenq dali kuhnqta e otdelno
++ [fav]
 
 https://www.imot.bg/obiava-1b177704095788357-prodava-dvustaen-apartament-grad-sofiya-mladost-1a-ul-ana-ahmatova
+322 711.95 лв
+= 61m2
 + izglejda prilichno
 - malko
++ [fav]
 
 https://www.imot.bg/obiava-1c177832432865769-prodava-tristaen-apartament-grad-sofiya-mladost-1
 312 911.29 лв
@@ -163,15 +196,20 @@ https://www.imot.bg/obiava-1c177832432865769-prodava-tristaen-apartament-grad-so
 - et 1
 - ne izaglejda super novo
 - staite sa malki
++ [fav] (nai-veroqtno shte mo mahna posle)
 
 https://www.imot.bg/obiava-1b178160133549378-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 https://www.imot.bg/obiava-1b178108283363860-prodava-dvustaen-apartament-grad-sofiya-mladost-1
 - Панел, Въведен в експлоатация 1970 - 1979 г.
 - et 8/8
 - 2staen
++ nqma pochti nishto vutre, ima kak da stane
++ [fav] (moje bi shte go mahna posle)
 
 https://www.imot.bg/obiava-1b177703713290531-prodava-dvustaen-apartament-grad-sofiya-mladost-1a-ul-ana-ahmatova
 + Тухла, Въведен в експлоатация 2019 г.
-+ izglejda hubavo
++ krasivo
 - malko, 56 m2
 - parter
+= moje bi ima kak da stane
++ [fav] (moje bi shte go mahna posle)
