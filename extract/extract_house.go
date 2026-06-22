@@ -279,32 +279,33 @@ skip_house:
 func findStroitelstvoGodina(
 	conf *config.Config,
 	link string,
-	stroitelstvo string,
-	stroitelstvoOk bool,
+	rawStroitelstvo string,
+	rawStroitelstvoOk bool,
 ) (
 	_stroitelstvo string,
 	_godina int64,
 	_skip bool,
 ) {
 	godina := int64(0)
+	stroitelstvo := "<no data>"
 
-	if !stroitelstvoOk {
-		if !conf.StroitelstvoMissingOk {
-			goto skip_house
+	if !rawStroitelstvoOk {
+		if conf.StroitelstvoMissingOk {
+			goto return_data
 		}
-		stroitelstvo = "<no data>"
+		goto skip_house
 	}
 
-	if stroitelstvoOk {
+	{
 
 		tmp := ", Въведен в експлоатация "
-		idx := strings.Index(stroitelstvo, tmp)
+		idx := strings.Index(rawStroitelstvo, tmp)
 		if idx < 0 {
 			log.Fatalf("Site layout must have changed - %v", link)
 		}
 
-		godinaStr := stroitelstvo[idx+len(tmp):]
-		stroitelstvo = stroitelstvo[:idx]
+		godinaStr := rawStroitelstvo[idx+len(tmp):]
+		stroitelstvo = rawStroitelstvo[:idx]
 
 		if godinaStr == "" {
 			if !conf.GodinaMissingOk {
@@ -347,11 +348,6 @@ func findStroitelstvoGodina(
 			}
 		}
 
-	} else {
-		if !conf.StroitelstvoMissingOk {
-			goto skip_house
-		}
-		stroitelstvo = "<no data>"
 	}
 
 	if godina < conf.GodinaMin {
@@ -361,6 +357,7 @@ func findStroitelstvoGodina(
 		}
 	}
 
+return_data:
 	return stroitelstvo, godina, false
 
 skip_house:
