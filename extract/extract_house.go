@@ -140,7 +140,7 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _priceI
 	case "Цената е с включено ДДС":
 		priceInfo = ""
 	case "Цената е без ДДС":
-		price *= 1.2
+		price *= 1.2 // vuzmojno e zaradi tova cenata da nadmine tazi setnata v konfiga
 		priceInfo = fmt.Sprintf(" -> Добавени 20%% към цената заради: %v", priceInfo)
 	default:
 		log.Fatalf("Unrecognised DDS format `%v` - %v", priceInfo, url)
