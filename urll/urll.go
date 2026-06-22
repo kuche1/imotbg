@@ -32,6 +32,7 @@ func Generate(conf *config.Config, pageNum int, priceMinEur int, priceMaxEur int
 
 	///
 
+	//// TODO: nqkoi obqvi burkat tozi tag
 	if conf.ZaduljitelnoGotovZaNanasqne {
 		// y Завършени - Имоти въведени в експлоатация
 		// n В строеж или имоти НЕ въведени в експлоатация

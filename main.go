@@ -29,10 +29,18 @@ func main() {
 			if a < b {
 				return -1
 			}
-			if b > 1 {
+			if a > b {
 				return 1
 			}
-			return 0
+
+			if houseA.Link < houseB.Link {
+				return -1
+			}
+			if houseA.Link > houseB.Link {
+				return 1
+			}
+
+			panic("duplicate links, if we actually reach this case, we can return 0, the outputted data should be the same anyways")
 		},
 	)
 
