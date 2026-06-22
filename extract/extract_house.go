@@ -258,12 +258,44 @@ func findParams(
 	///// stroitelstvo, godina
 
 	key := "Строителство"
-	stroitelstvo, ok := parametri[key]
+	rawStroitelstvo, rawStroitelstvoOk := parametri[key]
 	delete(parametri, key)
 
+	stroitelstvo, godina, skip := findStroitelstvoGodina(conf, link, rawStroitelstvo, rawStroitelstvoOk)
+	if skip {
+		goto skip_house
+	}
+
+	///// return
+
+	return parametri, area, stroitelstvo, godina, false
+
+	///// skip
+
+skip_house:
+	return nil, 0, "", 0, true
+}
+
+func findStroitelstvoGodina(
+	conf *config.Config,
+	link string,
+	stroitelstvo string,
+	stroitelstvoOk bool,
+) (
+	_stroitelstvo string,
+	_godina int64,
+	_skip bool,
+) {
 	godina := int64(0)
 
-	if ok {
+	if !stroitelstvoOk {
+		if !conf.StroitelstvoMissingOk {
+			goto skip_house
+		}
+		stroitelstvo = "<no data>"
+	}
+
+	if stroitelstvoOk {
 
 		tmp := ", Въведен в експлоатация "
 		idx := strings.Index(stroitelstvo, tmp)
@@ -329,14 +361,10 @@ func findParams(
 		}
 	}
 
-	///// return
-
-	return parametri, area, stroitelstvo, godina, false
-
-	///// skip
+	return stroitelstvo, godina, false
 
 skip_house:
-	return nil, 0, "", 0, true
+	return "", 0, true
 }
 
 func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
