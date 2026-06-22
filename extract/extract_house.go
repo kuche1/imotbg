@@ -1,6 +1,7 @@
 package extract
 
 import (
+	"fmt"
 	"log"
 	"slices"
 	"strconv"
@@ -37,7 +38,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 		// log.Printf("DBG: elemInfo=%v", elemShortInfo)
 		// log.Printf("DBG: elemParams=%v", elemParams)
 
-		price, invalid := findPrice(elemInfo, pageData.link)
+		price, priceInfo, invalid := findPrice(elemInfo, pageData.link)
 		if invalid {
 			continue
 		}
@@ -78,6 +79,7 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 		houses <- house.NewHouse(
 			pageData.link,
 			price,
+			priceInfo,
 			location,
 			area,
 			stai,
@@ -89,19 +91,20 @@ func extractHouses(conf *config.Config, listingLinks chan *_ListingPageData, hou
 	}
 }
 
-func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invalid bool) {
+func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _priceInfo string, _invalid bool) {
 	const eur = "€"
 
-	// log.Printf("DBG: elem_info: %v", elem_info)
-
-	elem := elemInfo.Find("div.Price").First()
+	elem := elemInfo.Find("div.Price")
+	if elem.Length() == 0 {
+		log.Fatalf("Site must have changed layout - %v", url)
+	}
+	elem = elem.First()
 
 	priceStr := strings.TrimSpace(elem.Text())
-	// log.Printf("DBG: price: %v", price)
 
 	if !strings.Contains(priceStr, eur) {
 		log.Printf("Price in euros not found: %v", url)
-		return 0, true
+		return 0, "", true
 	}
 
 	parts := strings.Split(priceStr, eur)
@@ -111,7 +114,7 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invali
 
 	price, err := strconv.ParseFloat(priceStr, 64)
 	if err != nil {
-		log.Fatal("URL `", url, "`:", err)
+		log.Fatalf("%v - %v", err, url)
 	}
 
 	//// actually im not sure if this really is the case I might be mistaken
@@ -121,7 +124,31 @@ func findPrice(elemInfo *goquery.Selection, url string) (_price float64, _invali
 	// 	return 0, true
 	// }
 
-	return price, false
+	///// dds
+
+	elem = elemInfo.Find("div.PriceInfo")
+	if elem.Length() == 0 {
+		log.Fatalf("Site must have changed layout - %v", url)
+	}
+	elem = elem.First()
+
+	priceInfo := elem.Text()
+
+	switch priceInfo {
+	case "Не се начислява ДДС":
+		fallthrough
+	case "Цената е с включено ДДС":
+		priceInfo = ""
+	case "Цената е без ДДС":
+		price *= 1.2
+		priceInfo = fmt.Sprintf(" -> Добавени 20%% към цената заради: %v", priceInfo)
+	default:
+		log.Fatalf("Unrecognised DDS format `%v` - %v", priceInfo, url)
+	}
+
+	/////
+
+	return price, priceInfo, false
 }
 
 func findLocation(conf *config.Config, elemInfo *goquery.Selection, link string) (_location string, _stai string, _blacklisted bool) {
