@@ -276,11 +276,11 @@ func findParams(
 
 		if godinaStr == "" {
 			if !conf.GodinaMissingOk {
-				return nil, 0, "", 0, true
+				goto skip_house
 			}
 		} else if godinaStr == "Преди 1920 г." {
 			if !conf.GodinaPredi1920Ok {
-				return nil, 0, "", 0, true
+				goto skip_house
 			}
 		} else {
 			suffix := " г."
@@ -317,7 +317,7 @@ func findParams(
 
 	} else {
 		if !conf.StroitelstvoMissingOk {
-			return nil, 0, "", 0, true
+			goto skip_house
 		}
 		stroitelstvo = "<no data>"
 	}
@@ -325,13 +325,18 @@ func findParams(
 	if godina < conf.GodinaMin {
 		if (godina == 0) && (conf.GodinaMissingOk) {
 		} else {
-			return nil, 0, "", 0, true
+			goto skip_house
 		}
 	}
 
 	///// return
 
 	return parametri, area, stroitelstvo, godina, false
+
+	///// skip
+
+skip_house:
+	return nil, 0, "", 0, true
 }
 
 func findEkstri(conf *config.Config, elemEkstri *goquery.Selection, link string) (_value []string, _blacklisted bool) {
