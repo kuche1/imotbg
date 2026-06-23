@@ -105,6 +105,7 @@ var LinkBlacklist = []string{
 
 	//// lokaciqta e luja
 
+	"https://www.imot.bg/obiava-1a178169296923073-prodava-ednostaen-apartament-grad-sofiya-mladost-1",
 	"https://www.imot.bg/obiava-1c177978613173915-prodava-tristaen-apartament-grad-sofiya-druzhba-2",
 	"https://www.imot.bg/obiava-1c166434162354666-prodava-tristaen-apartament-grad-sofiya-7-mi-11-ti-kilometar",
 	"https://www.imot.bg/obiava-1c178161343137262-prodava-tristaen-apartament-grad-sofiya-tsentar",
