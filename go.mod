@@ -5,7 +5,7 @@ go 1.26.1
 require (
 	github.com/PuerkitoBio/goquery v1.12.0
 	github.com/dustin/go-humanize v1.0.1
-	github.com/kuche1/gonet v0.0.0-20260521170408-08260588b586
+	github.com/kuche1/gonet v0.0.0-20260624170259-e348d15b8f96
 	golang.org/x/net v0.54.0
 )
 
