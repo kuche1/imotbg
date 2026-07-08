@@ -3,7 +3,7 @@
 
 https://www.imot.bg/obiava-1b177127565496352-prodava-dvustaen-apartament-grad-sofiya-geo-milev-ul-hemus
 387 254.34 лв
-+ tuhla 1970
+- tuhla 1970
 + 85m2
 + samo 2 snimki
 
