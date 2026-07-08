@@ -4,9 +4,15 @@
 https://www.imot.bg/obiava-1b178299517775100-prodava-dvustaen-apartament-grad-sofiya-mladost-2
 422 459.28 лв
 = tuhla 2009 (2009 e sus)
-+ 87m2
++ 87m2 (chisto 70)
 + ednata staq e ogromna
 - posleden etaj
++ vliza mnogo svetlina
+- bez tec, s boiler
++ "миялна"
++ "Имотът може да бъде резервиран и свален от продажба със заплащане на депозит"
++ dush kabinata e otdelno
++ [fav]
 
 https://www.imot.bg/obiava-1b176779639911005-prodava-dvustaen-apartament-grad-sofiya-mladost-2
 424 415.11 лв
@@ -20,13 +26,21 @@ https://www.imot.bg/obiava-1b174920646168096-prodava-dvustaen-apartament-grad-so
 = tuhla bez godina
 = 78m2
 + Към имота се продава и подземен гараж на цена 35 000 евро
+- sduhan layout
+- boiler (koito e I V BANQTA)
++ [fav]
 
 https://www.imot.bg/obiava-1b177678827213921-prodava-dvustaen-apartament-grad-sofiya-mladost-2
 459 620.05 лв
-= tuhla bez godina
-= 74m2
+= tuhla 2007 (2007 e sus)
+= 74m2 (mai e chisto)
++ tuhlata e otdelno ot vsekidnevnata
+= "Възможност за паркиране след бариера с дистанционно, но няма собствено обособено паркомясто"
+- "без съдомиялна машина"
++ [fav]
 
 https://www.imot.bg/obiava-1b178262730776137-prodava-dvustaen-apartament-grad-sofiya-mladost-2
 467 443.37 лв
 = tuhla bez godina
 = 70m2
+- staq1=vsekidnevna+kuhnq staq2=spalnq
