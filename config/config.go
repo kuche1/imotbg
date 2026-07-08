@@ -12,6 +12,7 @@ type Config struct {
 	GodinaMissingOk            bool
 	GodinaPredi1920Ok          bool
 	GodinaMin                  int64
+	GodinaMax                  int64
 	StaiOkMap                  map[string]bool
 	PoneEdnaZaduljitelnaEkstra []string
 }
@@ -23,14 +24,15 @@ func NewConfig() *Config {
 		PriceMinEur: 0,
 		PriceMaxEur: 200_000,
 
-		PloshtMinM2: 40,            //83,             //65,
+		PloshtMinM2: 50,            //83,             //65,
 		PloshtMaxM2: math.MaxInt64, //83,//65,
 
 		StroitelstvoMissingOk: true,
 
 		GodinaMissingOk:   true,
 		GodinaPredi1920Ok: false,
-		GodinaMin:         1950,
+		GodinaMin:         1960,
+		GodinaMax:         2026,
 
 		StaiOkMap: map[string]bool{
 			"1-СТАЕН":       true,
@@ -45,7 +47,7 @@ func NewConfig() *Config {
 		// sekciq "Особености"
 		PoneEdnaZaduljitelnaEkstra: []string{
 			// "С гараж", "С паркинг",
-			// "Тухла", "ЕПК", "ПК",
+			"Тухла", // "ЕПК", "ПК",
 		},
 	}
 }

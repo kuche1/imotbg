@@ -415,6 +415,10 @@ func findStroitelstvoGodina(
 		goto skip_house
 	}
 
+	if godina > conf.GodinaMax {
+		goto skip_house
+	}
+
 return_data:
 	return stroitelstvo, godina, false
 
