@@ -5,6 +5,7 @@ import (
 	"log"
 	"math"
 	"os"
+	"strings"
 )
 
 type Config struct {
@@ -63,28 +64,47 @@ func NewConfig() *Config {
 func parseAlreadyRegistered() []string {
 	alreadyRegistered := make([]string, 0, 16)
 
-	file, err := os.Open("results/registered/idk.txt")
+	folderPath := "results/registered"
+
+	entries, err := os.ReadDir(folderPath)
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer file.Close()
 
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := scanner.Text()
-		if len(line) == 0 {
+	for _, entry := range entries {
+		if entry.IsDir() {
 			continue
 		}
 
-		if line[0] == '#' {
-			continue
+		filePath := folderPath + "/" + entry.Name()
+
+		fileObj, err := os.Open(filePath)
+		if err != nil {
+			log.Fatal(err)
+		}
+		defer fileObj.Close()
+
+		scanner := bufio.NewScanner(fileObj)
+		for scanner.Scan() {
+			line := scanner.Text()
+			if len(line) == 0 {
+				continue
+			}
+
+			if line[0] == '#' {
+				continue
+			}
+
+			if !strings.HasPrefix(line, "https://") {
+				log.Fatalf("Invalid line in config (must be a link or a comment): %v", line)
+			}
+
+			alreadyRegistered = append(alreadyRegistered, line)
 		}
 
-		alreadyRegistered = append(alreadyRegistered, line)
-	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
+		if err := scanner.Err(); err != nil {
+			log.Fatal(err)
+		}
 	}
 
 	return alreadyRegistered
