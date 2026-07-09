@@ -3,20 +3,30 @@ package main
 import (
 	"fmt"
 	"slices"
+	"time"
 
 	"github.com/kuche1/imotbg/config"
 	"github.com/kuche1/imotbg/extract"
 	"github.com/kuche1/imotbg/house"
+	"golang.org/x/time/rate"
 )
 
 func main() {
 	conf := config.NewConfig()
 
-	houses := make([]*house.House, 0)
+	houses := make([]*house.House, 0, 16)
+
+	limiter := rate.NewLimiter(rate.Every(time.Second), 1)
 
 	for house := range extract.Main(conf) {
 		houses = append(houses, house)
+
+		if limiter.Allow() {
+			fmt.Printf("Loaded %v house(s)...\n", len(houses))
+		}
 	}
+
+	fmt.Println()
 
 	slices.SortStableFunc(
 		houses,

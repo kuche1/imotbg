@@ -7,6 +7,7 @@ require (
 	github.com/dustin/go-humanize v1.0.1
 	github.com/kuche1/gonet v0.0.0-20260624170259-e348d15b8f96
 	golang.org/x/net v0.54.0
+	golang.org/x/time v0.15.0
 )
 
 require (
