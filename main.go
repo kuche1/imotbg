@@ -16,13 +16,13 @@ func main() {
 
 	houses := make([]*house.House, 0, 16)
 
-	limiter := rate.NewLimiter(rate.Every(time.Second), 1)
+	limiter := rate.NewLimiter(rate.Every(time.Millisecond*400), 1)
 
 	for house := range extract.Main(conf) {
 		houses = append(houses, house)
 
 		if limiter.Allow() {
-			fmt.Printf("Loaded %v house(s)...\n", len(houses))
+			fmt.Printf("Loading %v house(s)...\n", len(houses))
 		}
 	}
 
