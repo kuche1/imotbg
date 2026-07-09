@@ -26,6 +26,8 @@ func main() {
 		}
 	}
 
+	fmt.Printf("Sorting %v house(s)...\n", len(houses))
+
 	fmt.Println()
 
 	slices.SortStableFunc(
