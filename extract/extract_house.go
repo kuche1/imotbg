@@ -366,7 +366,7 @@ func findStroitelstvoGodina(
 				val, err := strconv.ParseInt(vuvedeno, 10, 64)
 				if err == nil {
 					godina = val
-					goto return_data
+					goto check_year_then_return
 				}
 
 				log.Fatalf("Unexpected prefix `%v` - %v", vuvedeno, link)
@@ -411,6 +411,7 @@ func findStroitelstvoGodina(
 
 	}
 
+check_year_then_return:
 	if godina < conf.GodinaMin {
 		goto skip_house
 	}
