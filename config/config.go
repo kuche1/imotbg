@@ -1,6 +1,11 @@
 package config
 
-import "math"
+import (
+	"bufio"
+	"log"
+	"math"
+	"os"
+)
 
 type Config struct {
 	GotovZaNanasqne            bool
@@ -15,6 +20,7 @@ type Config struct {
 	GodinaMax                  int64
 	StaiOkMap                  map[string]bool
 	PoneEdnaZaduljitelnaEkstra []string
+	AlreadyRegistered          []string
 }
 
 func NewConfig() *Config {
@@ -49,5 +55,37 @@ func NewConfig() *Config {
 			// "С гараж", "С паркинг",
 			"Тухла", // "ЕПК", "ПК",
 		},
+
+		AlreadyRegistered: parseAlreadyRegistered(),
 	}
+}
+
+func parseAlreadyRegistered() []string {
+	alreadyRegistered := make([]string, 0, 16)
+
+	file, err := os.Open("results/registered/idk.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if len(line) == 0 {
+			continue
+		}
+
+		if line[0] == '#' {
+			continue
+		}
+
+		alreadyRegistered = append(alreadyRegistered, line)
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+
+	return alreadyRegistered
 }
