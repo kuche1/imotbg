@@ -12,6 +12,8 @@ import (
 )
 
 func main() {
+	fmt.Printf("Looking for houses...\n")
+
 	conf := config.NewConfig()
 
 	houses := make([]*house.House, 0, 16)
