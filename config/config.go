@@ -29,7 +29,7 @@ func NewConfig() *Config {
 		GotovZaNanasqne: true,
 
 		PriceMinEur: 100_000,
-		PriceMaxEur: 241_000, // 240_000
+		PriceMaxEur: 242_000, // 240_000
 
 		PloshtMinM2: 54,            //83,             //65,
 		PloshtMaxM2: math.MaxInt64, //83,//65,
@@ -38,7 +38,7 @@ func NewConfig() *Config {
 
 		GodinaMissingOk:   true,
 		GodinaPredi1920Ok: false,
-		GodinaMin:         1970,
+		GodinaMin:         1980,
 		GodinaMax:         2026,
 
 		StaiOkMap: map[string]bool{
