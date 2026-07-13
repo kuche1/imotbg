@@ -38,7 +38,7 @@ func NewConfig() *Config {
 
 		GodinaMissingOk:   true,
 		GodinaPredi1920Ok: false,
-		GodinaMin:         1960,
+		GodinaMin:         1970,
 		GodinaMax:         2026,
 
 		StaiOkMap: map[string]bool{
