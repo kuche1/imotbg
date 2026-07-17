@@ -3,7 +3,7 @@ package define
 import "runtime"
 
 const NetCacheFolder = "net-cache"
-const NetRequestDelayMS = 4
+const NetRequestDelayMS = 5
 const NetCachedResponseValiditySec = 60 * 60 * 12 // 12 hours
 
 const LastPagePossible = 25
