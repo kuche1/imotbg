@@ -96,7 +96,7 @@ func parseAlreadyRegistered() []string {
 			}
 
 			if !strings.HasPrefix(line, "https://") {
-				log.Fatalf("Invalid line in config (must be a link or a comment): %v", line)
+				log.Fatalf("Invalid line in config (must be a link or a comment) - %v - %v", filePath, line)
 			}
 
 			alreadyRegistered = append(alreadyRegistered, line)
