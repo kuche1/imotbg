@@ -38,7 +38,7 @@ func NewConfig() *Config {
 
 		GodinaMissingOk:   true,
 		GodinaPredi1920Ok: false,
-		GodinaMin:         1980,
+		GodinaMin:         1985,
 		GodinaMax:         2026,
 
 		StaiOkMap: map[string]bool{
@@ -54,7 +54,7 @@ func NewConfig() *Config {
 		// sekciq "Особености"
 		PoneEdnaZaduljitelnaEkstra: []string{
 			// "С гараж", "С паркинг",
-			"Тухла", // "ЕПК", "ПК",
+			"Тухла", // "ЕПК", // "ПК",
 		},
 
 		AlreadyRegistered: parseAlreadyRegistered(),
