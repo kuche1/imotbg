@@ -58,6 +58,7 @@ func (self *House) Sprintf() string {
     price            : %v eur%v
     location         : %v
     area             : %v m2
+    eur/m2           : %.2f
     rooms            : %v
     stroitelstvo     : %v
     godina           : %v
@@ -69,6 +70,7 @@ func (self *House) Sprintf() string {
 		self.PriceInfo,
 		self.Location,
 		self.AreaM2,
+		self.PriceEur/float64(self.AreaM2),
 		self.Stai,
 		self.Stroitelstvo,
 		self.Godina,
